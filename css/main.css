@@ -1,4 +1,3 @@
-
 /*Reset*/
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -6,19 +5,87 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -26,25 +93,44 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -52,24 +138,28 @@ table {
 
 /*Estilos*/
 .container {
-    width: 85%;
-    margin: 0 auto;
+	width: 85%;
+	margin: 0 auto;
 }
-.encabezado .container{
-    display: flex;
-    background-color: aqua;
+
+.encabezado .container {
+	display: flex;
 	align-items: center;
 }
-.logo{
+
+.logo {
 	width: 15%;
 }
-.imgLogo{
+
+.imgLogo {
 	width: 100%;
 }
-.buscador{
+
+.buscador {
 	width: 35%;
 }
-.inputBuscador{
+
+.inputBuscador {
 	width: 100%;
 	padding-top: 12px;
 	padding-bottom: 12px;
@@ -77,14 +167,60 @@ table {
 	border: none;
 	font-size: 14px;
 }
-.btnLogin{
+
+.btnLogin {
 	display: flex;
 	justify-content: flex-end;
 	width: 45%;
 }
-.Login{
+
+.Login {
 	padding: 10px 45px;
 	font-size: 16px;
 	background-color: transparent;
 	border: 1px solid #2A7AE4;
+	color: #2A7AE4;
+}
+
+.banner {
+	background-image: url('/img/banner.jpg');
+	width: 100%;
+	height: 400px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: absolute;
+}
+
+.banner-info {
+	display: flex;
+	flex-direction: column;
+	margin-left: 152px;
+	margin-top: 10%;
+
+}
+
+.elemento-banner-info1 {
+	font-weight: 700;
+	font-size: 52px;
+	line-height: 61px;
+	color: #FFFFFF;
+	padding-bottom: 16px;
+}
+
+.elemento-banner-info2 {
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 26px;
+	color: #FFFFFF;
+	padding-bottom: 16px;
+
+}
+
+.btn-ver {
+	width: 130px;
+	padding: 16px;
+	background-color: #2A7AE4;
+	color: #FFFFFF;
+	border: none;
 }

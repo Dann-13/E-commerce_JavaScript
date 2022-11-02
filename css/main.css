@@ -137,6 +137,15 @@ table {
 }
 
 /*Estilos*/
+.app{
+	background: #f1f1f1;
+    display: grid;
+    grid-template-areas:
+        "contenido"
+        "footer";
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+}
 .container {
 	width: 85%;
 	margin: 0 auto;
@@ -189,7 +198,7 @@ table {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	position: absolute;
+	
 }
 
 .banner-info {
@@ -197,7 +206,7 @@ table {
 	flex-direction: column;
 	margin-left: 152px;
 	margin-top: 10%;
-
+	position:absolute;
 }
 
 .elemento-banner-info1 {

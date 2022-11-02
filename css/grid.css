@@ -1,13 +1,12 @@
 .productos {
-    border: 1px solid black;
 }
 
 .productos__items {
-    border: 1px solid black;
+    padding-bottom: 64px;
+
 }
 
 .productos__info {
-    border: 1px solid black;
 
 }
 
@@ -49,8 +48,6 @@
 }
 
 .productos__card {
-    background-color: aliceblue;
-    border: 1px solid black;
     display: grid;
     grid-template-areas:
         "card-imagen"
@@ -92,6 +89,7 @@
     font-size: 18px;
     line-height: 16px;
     color: #464646;
+    padding-bottom: 8px;
 }
 
 .productos__card___precio {
@@ -107,6 +105,7 @@
     display: flex;
     flex-wrap: wrap;
     grid-area: card-descripcion;
+    padding-top: 8px;
 }
 
 .productos__card___ver {

@@ -1,0 +1,79 @@
+.formulario__class {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+.formulario__logo {
+    width: 25%;
+}
+
+.logo__form {
+    width: 100%;
+}
+
+.info__elemento {
+    padding-bottom: 24px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-decoration: none;
+}
+
+.formulario__div {
+    width: 50%;
+    margin-top: 64px;
+}
+
+.detallesContacto-Titulos {
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    color: #464646;
+    padding-bottom: 8px;
+    font-weight: 700;
+}
+
+.elemento {
+    padding-top: 5px;
+}
+
+label {
+    display: block;
+    color: #A2A2A2;
+    background-color: #fff;
+    padding-left: 12px;
+    padding-top: 8PX;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+
+form input,
+form textarea {
+
+    font-family: 'Raleway', sans-serif;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    color: #525c66;
+    font-size: 1em;
+    resize: none;
+}
+
+.btn-enviarMensaje {
+    font-family: 'Raleway', sans-serif;
+    padding: 16px;
+    background-color: #2A7AE4;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    margin-bottom: 80px;
+}

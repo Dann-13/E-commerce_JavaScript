@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/productos.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
+
 <body class="app">
     <section class="encabezado">
         <div class="container">
@@ -212,7 +216,7 @@
                             <img class="productos__card___imagen" src="img/baloncesto1.png" alt="" srcset="">
                             <div class="productos__card___base">
                                 <div class="productos__card___header">
-                                    <h5 class="productos__card___titulo">Camiseta Seleccion Colombia</h5>
+                                    <h5 class="productos__card___titulo">Balon Baloncesto</h5>
                                     <p class="productos__card___precio">$30.000</p>
                                 </div>
                                 <div class="productos__card___descripcion">
@@ -224,7 +228,7 @@
                             <img class="productos__card___imagen" src="img/baloncesto2.png" alt="" srcset="">
                             <div class="productos__card___base">
                                 <div class="productos__card___header">
-                                    <h5 class="productos__card___titulo">Balon de Futbol</h5>
+                                    <h5 class="productos__card___titulo">Camisa lakers</h5>
                                     <p class="productos__card___precio">$30.000</p>
                                 </div>
                                 <div class="productos__card___descripcion">
@@ -236,7 +240,7 @@
                             <img class="productos__card___imagen" src="img/tenis1.png" alt="" srcset="">
                             <div class="productos__card___base">
                                 <div class="productos__card___header">
-                                    <h5 class="productos__card___titulo">Camisa Seleccion Argentina</h5>
+                                    <h5 class="productos__card___titulo">Pelota Tenis</h5>
                                     <p class="productos__card___precio">$30.000</p>
                                 </div>
                                 <div class="productos__card___descripcion">
@@ -248,7 +252,7 @@
                             <img class="productos__card___imagen" src="img/voleibol1.png" alt="" srcset="">
                             <div class="productos__card___base">
                                 <div class="productos__card___header">
-                                    <h5 class="productos__card___titulo">Medias Futbol</h5>
+                                    <h5 class="productos__card___titulo">Balon Voleibol</h5>
                                     <p class="productos__card___precio">$30.000</p>
                                 </div>
                                 <div class="productos__card___descripcion">
@@ -260,7 +264,7 @@
                             <img class="productos__card___imagen" src="img/natacion1.jpg" alt="" srcset="">
                             <div class="productos__card___base">
                                 <div class="productos__card___header">
-                                    <h5 class="productos__card___titulo">Camisa Millonarios</h5>
+                                    <h5 class="productos__card___titulo">Gafas Natacion</h5>
                                     <p class="productos__card___precio">$30.000</p>
                                 </div>
                                 <div class="productos__card___descripcion">
@@ -272,7 +276,7 @@
                             <img class="productos__card___imagen" src="img/beisbol.jpg" alt="" srcset="">
                             <div class="productos__card___base">
                                 <div class="productos__card___header">
-                                    <h5 class="productos__card___titulo">Zapatillas</h5>
+                                    <h5 class="productos__card___titulo">Pelota Beisbol</h5>
                                     <p class="productos__card___precio">$30.000</p>
                                 </div>
                                 <div class="productos__card___descripcion">
@@ -286,13 +290,54 @@
         </section>
 
         <section class="formulario">
-            <div class="formulario">
-
+            <div class="container">
+                <div class="formulario__class">
+                    <div class="formulario__logo">
+                        <img src="img/logos.svg" alt="" srcset="" class="logo__form">
+                    </div>
+                    <div class="info">
+                        <a href="" class="info__elemento">Quienes Somos</a>
+                        <a href="" class="info__elemento">Politicas de Privacidad</a>
+                        <a href="" class="info__elemento">Programa de fidelidad</a>
+                        <a href="" class="info__elemento">Nuestras tiendas</a>
+                        <a href="" class="info__elemento">Quiero ser franquisiado</a>
+                        <a href="" class="info__elemento1">Anuncie Aqui</a>
+                    </div>
+                    <div class="formulario__div">
+                        <ul>
+                            <li class="detallesContacto-Titulos">Hable Con nosotros</li>
+                            <li>
+                                <form action="" class="formulario-Contacto">
+                                    <div class="elemento">
+                                        <label for="nombre">Nombre</label>
+                                        <input id="nombre" type="text" id="name" name="user_name" placeholder="Escribe aquí tu nombre">
+                                    </div>
+                                    <div class="elemento">
+                                        <label for="title" class="form-label">Mensaje</label>
+                                        <textarea name="mensaje" class="mensaje" id="" cols="30" rows="5"
+                                            placeholder="Escriba su Mensaje"></textarea>
+                                    </div>
+                                    <div class="elemento">
+                                        <button class="btn-enviarMensaje" id="enviar" type="submit" >Enviar Mensaje</button>
+                                    </div>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-    <footer class="footer">
-
+    <footer class="rodapePrincipal">
+        <div class="container">
+            <section class="rodapePrincipal-list">
+                <ul class="footer-list">
+                    <li class="itemfooter-list">Desarrollado Por: Daniel Gomez </li>
+                    <li class="itemfooter-list">2022</li>
+                </ul>
+            </section>
+        </div>
     </footer>
 </body>
+
 </html>

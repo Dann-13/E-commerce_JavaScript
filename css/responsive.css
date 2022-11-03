@@ -1,0 +1,50 @@
+@media only screen and (max-width: 600px) {}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .app {
+        grid-template-rows: auto auto;
+    }
+
+    .banner-info {
+        margin-left: 30px;
+        margin-top: 200px;
+    }
+
+    .productos__card {
+        width: 25%;
+    }
+
+    .productos__contenido {
+        justify-content: space-around;
+    }
+
+    .formulario__1 {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+
+    }
+
+    .formulario__logo {
+        width: 50%;
+    }
+
+    .info {
+        width: 100%;
+        margin-left: 20px;
+    }
+
+    .formulario__div {
+        width: 60%;
+    }
+
+    .formulario__div ul {
+
+        margin-right: 32px;
+
+    }
+}

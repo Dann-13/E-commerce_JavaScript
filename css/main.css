@@ -166,6 +166,7 @@ table {
 
 .buscador {
 	width: 35%;
+	display: flex;
 }
 
 .inputBuscador {
@@ -189,6 +190,7 @@ table {
 	background-color: transparent;
 	border: 1px solid #2A7AE4;
 	color: #2A7AE4;
+	text-decoration: none;
 }
 
 .banner {

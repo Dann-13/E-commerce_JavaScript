@@ -188,12 +188,15 @@ table {
 
 .btn-enviarMensaje {
     font-family: 'Raleway', sans-serif;
-    padding: 20px;
     background-color: #2A7AE4;
+    padding: 12px 34px;
     color: #fff;
     font-size: 16px;
     border: none;
     margin-bottom: 80px;
+}
+.btnEntrar{
+    text-align: center;
 }
 
 .formulario{
@@ -281,4 +284,75 @@ form textarea {
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
     text-align: center;
+}
+@media only screen and (max-width: 668px) {
+    .container{
+        width: 85% !important;
+    }
+    .logo{
+        width: 30%;
+    }
+    .encabezado .container{
+        justify-content: space-between;
+    }
+    .inputBuscador{
+        display: none;
+    }
+    .formulario__sesion{
+        width: 80% !important;
+    }
+    .btnEntrar{
+        text-align: center;
+    }
+    .btn-enviarMensaje{
+        padding: 12px 34px;
+    }
+    .formulario__class{
+        flex-direction: column;
+    }
+    .formulario__1{
+        width: 80% !important;
+        flex-direction: column;
+        align-items: center;
+    }
+    .info{
+        width: 40% !important;
+        text-align: center;
+    }
+    .formulario__div{
+        width: 90% !important;
+    }
+}
+@media only screen and (max-width: 768px){
+    .container {
+        width: 95%;
+    }
+    .formulario__sesion{
+        width: 50%;
+    }
+    .formulario__1 {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+
+    }
+
+    .formulario__logo {
+        width: 50%;
+    }
+
+    .info {
+        width: 100%;
+        margin-left: 20px;
+    }
+
+    .formulario__div {
+        width: 60%;
+    }
+
+    .formulario__div ul {
+
+        margin-right: 32px;
+
+    }
 }

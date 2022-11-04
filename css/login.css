@@ -1,0 +1,284 @@
+/*Reset*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.container {
+	width: 85%;
+	margin: 0 auto;
+}
+.encabezado .container {
+	display: flex;
+	align-items: center;
+}
+.contenido .container{
+    display: flex;
+	align-items: center;
+    justify-content: center;
+}
+.logo {
+	width: 15%;
+}
+
+.imgLogo {
+	width: 100%;
+}
+.buscador {
+	width: 35%;
+	display: flex;
+}
+.titulo{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    padding-bottom: 24px;
+    font-weight: 700;
+    line-height: 21px;
+    color: #464646;
+}
+.inputBuscador {
+	width: 100%;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	background-color: transparent;
+	border: none;
+	font-size: 14px;
+}
+.formulario__sesion{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+}
+.campos{
+    margin-bottom: 30px;
+}
+
+.btn-enviarMensaje {
+    font-family: 'Raleway', sans-serif;
+    padding: 20px;
+    background-color: #2A7AE4;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    margin-bottom: 80px;
+}
+
+.formulario{
+    background-color: #EAF2FD
+}
+.formulario__class {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+}
+.formulario__1{
+    display: flex;
+}
+
+.formulario__logo {
+    width: 25%;
+}
+
+.logo__form {
+    width: 100%;
+}
+.info__elemento {
+    padding-bottom: 24px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-decoration: none;
+}
+
+.formulario__div {
+    width: 50%;
+    margin-top: 64px;
+}
+
+.detallesContacto-Titulos {
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    color: #464646;
+    padding-bottom: 8px;
+    font-weight: 700;
+}
+.elemento {
+    padding-top: 5px;
+}
+
+label {
+    display: block;
+    color: #A2A2A2;
+    background-color: #fff;
+    padding-left: 12px;
+    padding-top: 8PX;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+
+form input,
+form textarea {
+
+    font-family: 'Raleway', sans-serif;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    color: #525c66;
+    font-size: 1em;
+    resize: none;
+}
+.rodapePrincipal .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+    gap: 10px;
+
+}
+.itemfooter-list{
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    text-align: center;
+}

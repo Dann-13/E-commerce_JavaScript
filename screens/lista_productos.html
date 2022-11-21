@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/productos.css">
+    <link rel="stylesheet" href="../css/form.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/componentes/table.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <title>Lista Productos</title>
+</head>
+
+<body class="app">
+    <section class="encabezado">
+        <div class="container">
+            <div class="logo">
+                <img src="../img/logos.svg" alt="" class="imgLogo">
+            </div>
+            <div class="buscador">
+                <input type="text" name="buscador" id="buscador" class="inputBuscador" placeholder="¿Que decea buscar?">
+                <svg width="30" height="30" viewBox="0 0 18 18" fill="none" class="logo__buscador"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12.4999 11H11.7099L11.4299 10.73C12.6299 9.33 13.2499 7.42 12.9099 5.39C12.4399 2.61 10.1199 0.39 7.31989 0.05C3.08989 -0.47 -0.470107 3.09 0.0498932 7.32C0.389893 10.12 2.60989 12.44 5.38989 12.91C7.41989 13.25 9.32989 12.63 10.7299 11.43L10.9999 11.71V12.5L15.2499 16.75C15.6599 17.16 16.3299 17.16 16.7399 16.75C17.1499 16.34 17.1499 15.67 16.7399 15.26L12.4999 11ZM6.49989 11C4.00989 11 1.99989 8.99 1.99989 6.5C1.99989 4.01 4.00989 2 6.49989 2C8.98989 2 10.9999 4.01 10.9999 6.5C10.9999 8.99 8.98989 11 6.49989 11Z"
+                        fill="#464646" />
+                </svg>
+            </div>
+        </div>
+
+    </section>
+    <main class="contenido">
+        <div class="container">
+            <div class="agregar">
+                <h2>Todos los Productos</h2>
+            </div>
+            <div class="productos__items">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="table__column--p">Referencia</th>
+                            <th class="table__column--g">Nombre</th>
+                            <th class="table__column--l">Precio</th>
+                            <th class="table__column--m ">
+                                <a href="./registrar_cliente.html" class="btn_table">Agregar Producto</a>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody data-table>
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <section class="formulario">
+            <div class="container">
+                <div class="formulario__class">
+                    <div class="formulario__1">
+                        <div class="formulario__logo">
+                            <img src="../img/logos.svg" alt="" srcset="" class="logo__form">
+                        </div>
+                        <div class="info">
+                            <a href="" class="info__elemento">Quienes Somos</a>
+                            <a href="" class="info__elemento">Politicas de Privacidad</a>
+                            <a href="" class="info__elemento">Programa de fidelidad</a>
+                            <a href="" class="info__elemento">Nuestras tiendas</a>
+                            <a href="" class="info__elemento">Quiero ser franquisiado</a>
+                            <a href="" class="info__elemento1">Anuncie Aqui</a>
+                        </div>
+                    </div>
+                    <div class="formulario__div">
+                        <ul>
+                            <li class="detallesContacto-Titulos">Hable Con nosotros</li>
+                            <li>
+                                <form action="" class="formulario-Contacto">
+                                    <div class="elemento">
+                                        <label for="nombre">Nombre</label>
+                                        <input id="nombre" type="text" id="name" name="user_name"
+                                            placeholder="Escribe aquí tu nombre">
+                                    </div>
+                                    <div class="elemento">
+                                        <label for="title" class="form-label">Mensaje</label>
+                                        <textarea name="mensaje" class="mensaje" id="" cols="30" rows="5"
+                                            placeholder="Escriba su Mensaje"></textarea>
+                                    </div>
+                                    <div class="elemento">
+                                        <button class="btn-enviarMensaje" id="enviar" type="submit">Enviar
+                                            Mensaje</button>
+                                    </div>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="rodapePrincipal">
+        <div class="container">
+            <section class="rodapePrincipal-list">
+                <ul class="footer-list">
+                    <li class="itemfooter-list">Desarrollado Por: Daniel Gomez </li>
+                    <li class="itemfooter-list">2022</li>
+                </ul>
+            </section>
+        </div>
+    </footer>
+    <script type="Module" src="../controllers/producto-controller.js"></script>
+</body>
+
+</html>

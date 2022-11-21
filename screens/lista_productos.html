@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/productos.css">
     <link rel="stylesheet" href="../css/form.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/componentes/table.css">
     <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="/css/base/reset.css">
+    <link rel="stylesheet" href="/css/listar_productos.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
     <title>Lista Productos</title>
 </head>
@@ -34,26 +35,12 @@
 
     </section>
     <main class="contenido">
-        <div class="container">
+        <div class="container__list">
             <div class="agregar">
                 <h2>Todos los Productos</h2>
             </div>
-            <div class="productos__items">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th class="table__column--p">Referencia</th>
-                            <th class="table__column--g">Nombre</th>
-                            <th class="table__column--l">Precio</th>
-                            <th class="table__column--m ">
-                                <a href="./registrar_cliente.html" class="btn_table">Agregar Producto</a>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody data-table>
-                       
-                    </tbody>
-                </table>
+            <div class="productos__items" data-productos>
+
             </div>
         </div>
         <section class="formulario">
@@ -110,6 +97,7 @@
         </div>
     </footer>
     <script type="Module" src="../controllers/producto-controller.js"></script>
+    
 </body>
 
 </html>

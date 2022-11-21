@@ -1,25 +1,23 @@
 import { productosServices } from "../services/productos-service.js";
 
-const crearNuevaSeccion = (nombre, precio, id) => {
-    const seccion = document.createElement("tr");
+const crearNuevaSeccion = (nombre, precio, id,imagen) => {
+    const seccion = document.createElement("div");
+    seccion.classList.add("container");
     const contenido = `
-    <td class="td" data-td="">imagen</td>
-    <td>${nombre}</td>
-    <td>${precio}</td>
-    <td>
-        <ul class="table__button-control">
-            <li>
-                <a href="../screens/editar_cliente.html?id${id}"
-                    class="btn_table">Editar</a>
-            </li>
-            <li>
-                <button class="btn_table" type="button"
-                    id="${id}">
-                    Eliminar
-                </button>
-            </li>
-        </ul>
-    </td>
+    <div class="imagen">
+      <img src="${imagen}" alt="" class="imagen__Producto">
+    </div>
+    <div class="nombre">
+      <p>${nombre}</p>
+    </div>
+    <div class="precio">
+      <p>${precio}</p>
+    </div>
+    <div class="btn">
+      <button class="btns" type="button" id="${id}">Eliminar</button>
+      <a href="../screens/editar_cliente.html?id${id}" class="btns">Editar</a>
+
+    </div>
     `
     seccion.innerHTML = contenido;
     const btn = seccion.querySelector("button")
@@ -36,12 +34,12 @@ const crearNuevaSeccion = (nombre, precio, id) => {
     return seccion;
 
 }
-const table = document.querySelector('[data-table]');
+const table = document.querySelector('[data-productos]');
 
 productosServices.lista_productos().then((data)=>{
     console.log(data);
-    data.forEach(({nombre,precio,id})=>{
-        const nuevaLinea = crearNuevaSeccion(nombre,precio,id);
+    data.forEach(({nombre,precio,id,imagen})=>{
+        const nuevaLinea = crearNuevaSeccion(nombre,precio,id,imagen);
         table.appendChild(nuevaLinea)
     })
 }).catch((error)=> console.log("Ocurrio un error: ",error))

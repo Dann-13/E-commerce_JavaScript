@@ -20,8 +20,15 @@ const crearNuevaSeccion = (nombre, precio, id,url) => {
     </div>
     `
     seccion.innerHTML = contenido;
-    const btn = seccion.querySelector("button")
-    console.log(btn);
+    const btn = seccion.querySelector("button");
+    btn.addEventListener("click", (event) => {
+      const id = btn.id;
+      console.log(btn ,id);
+      productosServices.eliminarProducto(id).then((response) =>{
+        console.log(response);
+        
+      }).catch(error => console.log(error));
+    });
     /* btn.addEventListener("click",() =>{
         const id = btn.id;
         productosServices.eliminarCliente(id).then(respuesta =>{

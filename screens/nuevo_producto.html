@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +13,7 @@
 
     <title>Nuevo Producto</title>
 </head>
+
 <body class="app">
     <section class="encabezado">
         <div class="container">
@@ -31,16 +33,18 @@
     </section>
     <main class="main__contenido">
         <div class="contenido">
-            <p>Agregar Producto</p>
-            <label for="urlImagen" class="label__info">URL Imagen</label>
-            <input type="url" name="urlImagen" id="input__imagen" class="input">
-            <label for="nombreProducto" class="label__info">Nombre Producto</label>
-            <input type="text" name="nombreProducto" id="input__producto" class="input">
-            <label for="precioProducto" class="label__info">Precio</label>
-            <input type="number" name="precioProducto" id="input__precio" class="input">
-            <label for="descripcionProducto" class="label__info">Descripcion</label>
-            <input type="text" name="descripcionProducto" id="input__descripcion" class="input">
-            <button type="submit">Agregar Producto</button>
+            <form data-form>
+                <p>Agregar Producto</p>
+                <label for="urlImagen" class="label__info">URL Imagen</label>
+                <input type="url" name="urlImagen" id="input__imagen" class="input" data-url>
+                <label for="nombreProducto" class="label__info">Nombre Producto</label>
+                <input type="text" name="nombreProducto" id="input__producto" class="input" data-nombre>
+                <label for="precioProducto" class="label__info">Precio</label>
+                <input type="number" name="precioProducto" id="input__precio" class="input" data-precio>
+                <label for="descripcionProducto" class="label__info">Descripcion</label>
+                <input type="text" name="descripcionProducto" id="input__descripcion" class="input" data-descripcio>
+                <button type="submit">Agregar Producto</button>
+            </form>
         </div>
     </main>
 
@@ -56,6 +60,8 @@
             </section>
         </div>
     </footer>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"></script>
+    <script type="Module" src="/controllers/registro-controller.js"></script>
 </body>
+
 </html>

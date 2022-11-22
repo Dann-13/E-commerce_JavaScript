@@ -1,11 +1,11 @@
 import { productosServices } from "../services/productos-service.js";
 
-const crearNuevaSeccion = (nombre, precio, id,imagen) => {
+const crearNuevaSeccion = (nombre, precio, id,url) => {
     const seccion = document.createElement("div");
     seccion.classList.add("container");
     const contenido = `
     <div class="imagen">
-      <img src="${imagen}" alt="" class="imagen__Producto">
+      <img src="${url}" alt="" class="imagen__Producto">
     </div>
     <div class="nombre">
       <p>${nombre}</p>
@@ -38,8 +38,8 @@ const table = document.querySelector('[data-productos]');
 
 productosServices.lista_productos().then((data)=>{
     console.log(data);
-    data.forEach(({nombre,precio,id,imagen})=>{
-        const nuevaLinea = crearNuevaSeccion(nombre,precio,id,imagen);
+    data.forEach(({nombre,precio,id,url})=>{
+        const nuevaLinea = crearNuevaSeccion(nombre,precio,id,url);
         table.appendChild(nuevaLinea)
     })
 }).catch((error)=> console.log("Ocurrio un error: ",error))

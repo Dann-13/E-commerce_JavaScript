@@ -6,6 +6,13 @@
       "precio": "200.000",
       "descripcion": "hola vendo un jugiete de mario",
       "id": "327b26da-9e87-457b-ba3b-324d4aad867a"
+    },
+    {
+      "url": "https://i0.wp.com/ensedeciencia.com/wp-content/uploads/2022/03/Python-P.jpg?resize=800%2C451&ssl=1",
+      "nombre": "Python",
+      "precio": "20",
+      "descripcion": "Python 1",
+      "id": "18d6af3c-4604-43ae-a91e-e3e1b0465b4d"
     }
   ]
 }

@@ -69,7 +69,7 @@
 }
 .inputContainerButton{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }
 .submitBtn {
 
@@ -81,6 +81,7 @@
     cursor: pointer;
     font-size: 16px;
     font-family: "Raleway";
+    text-decoration: none;
 
 }
 

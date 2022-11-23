@@ -7,6 +7,15 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+.register-card__icon{
+    display: block;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-bottom: 1rem;
+    background-image: url(/assets/img/actu.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 .button{
     font-family: "Raleway", sans-serif;
     padding: 16px;

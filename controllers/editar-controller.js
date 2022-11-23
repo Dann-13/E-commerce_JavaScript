@@ -35,7 +35,7 @@ formulario.addEventListener('submit',(event) =>{
     const precio = document.querySelector('[data-precio]').value;
     const descripcion = document.querySelector('[data-descripcion]').value;
     productosServices.actualizarProducto(urlImagen,nombre,precio,descripcion,id).then(() =>{
-        window.location.href='/screens/edicionCompleta.html';
+        window.location.href='edicionCompleta.html';
         console.log("Edicion satisfactoria");
     });
 });

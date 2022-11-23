@@ -8,6 +8,6 @@ form.addEventListener('submit', (event) => {
     const descripcion = document.querySelector('[data-descripcio]').value;
     console.log(url, nombre, precio, descripcion);
     productosServices.nuevo_Producto(url, nombre, precio, descripcion).then(response => {
-        window.location.href = "../screens/registroCompleto.html";
+        window.location.href = "/registroCompleto.html";
     }).catch(error => console.console.log);
 });

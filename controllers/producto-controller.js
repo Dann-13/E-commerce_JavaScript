@@ -15,7 +15,7 @@ const crearNuevaSeccion = (nombre, precio, id,url) => {
     </div>
     <div class="btn">
       <button class="btns" type="button" id="${id}">Eliminar</button>
-      <a href="/screens/editarProducto.html?id${id}" class="btns">Editar</a>
+      <a href="/screens/editarProducto.html?id=${id}" class="btns">Editar</a>
 
     </div>
     `

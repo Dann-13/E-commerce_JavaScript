@@ -2,6 +2,11 @@
   margin: 0 auto;
   width: 90%;
 }
+.btnclass{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
 .agregar {
   text-align: center;
 }

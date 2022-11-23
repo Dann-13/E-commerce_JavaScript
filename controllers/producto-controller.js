@@ -15,7 +15,7 @@ const crearNuevaSeccion = (nombre, precio, id,url) => {
     </div>
     <div class="btn">
       <button class="btns" type="button" id="${id}">Eliminar</button>
-      <a href="../screens/editar_cliente.html?id${id}" class="btns">Editar</a>
+      <a href="/screens/editarProducto.html?id${id}" class="btns">Editar</a>
 
     </div>
     `
@@ -29,15 +29,7 @@ const crearNuevaSeccion = (nombre, precio, id,url) => {
         
       }).catch(error => console.log(error));
     });
-    /* btn.addEventListener("click",() =>{
-        const id = btn.id;
-        productosServices.eliminarCliente(id).then(respuesta =>{
-            console.log(respuesta);
-        }).catch(error => {
-            alert("Ocurrio un error: ");
-        });
 
-    }) */
     return seccion;
 
 }

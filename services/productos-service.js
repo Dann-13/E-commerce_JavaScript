@@ -14,9 +14,13 @@ const eliminarProducto = (id) =>{
         method: "DELETE",
     })
 }
+const detalleProducto = (id) => {
+    return fetch(`http://localhost:3000/productos/${id}`).then((respuesta) => respuesta.json());s
+}
 
 export const productosServices = {
     lista_productos,
     nuevo_Producto,
-    eliminarProducto
+    eliminarProducto,
+    detalleProducto
 }

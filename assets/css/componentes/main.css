@@ -31,7 +31,9 @@
 	width: 35%;
 	display: flex;
 }
-
+.button_buscar{
+	border: none;
+}
 .inputBuscador {
 	width: 100%;
 	padding-top: 12px;

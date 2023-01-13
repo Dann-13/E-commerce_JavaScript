@@ -1,18 +1,18 @@
 {
-  "productos": [
-    {
-      "url": "https://depor.com/resizer/U6CT3QF4yR0qIrOOiSZs13wRbWs=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/RNNHOFMEAZAIVAAHTZRR4IBJSE.jpg",
-      "nombre": "Jueguete mario",
-      "precio": "200.000",
-      "descripcion": "hola vendo un jugiete de mario",
-      "id": "327b26da-9e87-457b-ba3b-324d4aad867a"
-    },
+  "products": [
     {
       "url": "https://i0.wp.com/ensedeciencia.com/wp-content/uploads/2022/03/Python-P.jpg?resize=800%2C451&ssl=1",
-      "nombre": "Python",
-      "precio": "20",
-      "descripcion": "Python 1",
+      "name": "Pythonn",
+      "price": "20",
+      "description": "Python 1",
       "id": "18d6af3c-4604-43ae-a91e-e3e1b0465b4d"
+    },
+    {
+      "url": "https://estaticos-cdn.sport.es/clip/cc1f1efe-5198-459e-8e27-9d07d852a94b_alta-libre-aspect-ratio_default_0.jpg",
+      "name": "Copa del Mudo",
+      "price": "50000",
+      "description": "Una copita del Mundo",
+      "id": "e03a026a-ba12-4af3-a6e5-4a1b6d54a4f1"
     }
   ]
 }

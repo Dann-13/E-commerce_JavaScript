@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/componentes/main.css">
+    <link rel="stylesheet" href="assets/css/componentes/form.css">
+    <link rel="stylesheet" href="assets/css/componentes/footer.css">
+    <link rel="stylesheet" href="assets/css/componentes/table.css">
+    <link rel="stylesheet" href="assets/css/base/reset.css">
+    <link rel="stylesheet" href="assets/css/listar_productos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <title>Lista Productos</title>
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="encabezado">
+        <div class="container">
+            <div class="logo">
+                <img src="assets/img/logos.svg" alt="" class="imgLogo">
+            </div>
+
+            <form action="" class="buscador" id="form">
+                <input type="text" name="buscador" id="buscador" class="inputBuscador" placeholder="¿Que decea buscar?"
+                    data-info>
+                <button type="submit" class="button_buscar"> <img src="assets/img/buscar.png" alt="buscar"
+                        class="logo__buscador"> </button>
+            </form>
+
+            <div class="btnclass">
+                <a href="/screens/index.html" class="btns">Salir</a>
+            </div>
+        </div>
+
+    </section>
+    <main class="contenido">
+        <div class="container__list">
+
+            <div class="productos">
+
+            </div>
+        </div>
+        <h2>Producto Buscado</h2>
+        <section class="product-result"></section>
+    </main>
+    <script type="Module" src="/services/productos-service.js"></script>
+</body>
+
+</html>

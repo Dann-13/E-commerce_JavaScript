@@ -1,11 +1,11 @@
 const lista_productos = () => fetch("http://localhost:3000/products").then(response => response.json());
-const nuevo_Producto = (url, nombre, precio, descripcion) => {
+const nuevo_Producto = (url, name, price, description) => {
     return fetch("http://localhost:3000/products", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({ url, nombre, precio, descripcion, id: uuid.v4() })
+        body: JSON.stringify({ url, name, price, description, id: uuid.v4() })
     })
 };
 const eliminarProducto = (id) => {
@@ -17,15 +17,20 @@ const eliminarProducto = (id) => {
 const detalleProducto = (id) => {
     return fetch(`http://localhost:3000/products/${id}`).then((respuesta) => respuesta.json())
 }
-const actualizarProducto = (url, nombre, precio, descripcion, id) => {
-    return fetch(`http://localhost:3000/products/${id}`, {
-        method: "PUT",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ url, nombre, precio, descripcion, id })
-    })
-        .then((respuesta) => console.log(respuesta))
+async function updateProduct(productId, updatedProduct) {
+    try {
+        const response = await fetch(`http://localhost:3000/products/${productId}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(updatedProduct)
+        });
+        const data = await response.json();
+        console.log(data);
+    } catch (err) {
+        console.error(err);
+    }
 }
 async function searchProduct(productName) {
     try {
@@ -73,6 +78,6 @@ export const productosServices = {
     nuevo_Producto,
     eliminarProducto,
     detalleProducto,
-    actualizarProducto,
+    updateProduct,
     searchProduct
 }

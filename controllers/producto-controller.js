@@ -1,6 +1,6 @@
 import { productosServices } from "../services/productos-service.js";
 
-const crearNuevaSeccion = (name, price, id,url) => {
+const crearNuevaSeccion = (url, name, price,id) => {
     const seccion = document.createElement("div");
     seccion.classList.add("container");
     seccion.id="new";
@@ -16,7 +16,7 @@ const crearNuevaSeccion = (name, price, id,url) => {
     </div>
     <div class="btn">
       <button class="btns" type="button" id="${id}">Eliminar</button>
-      <a href="/editarProducto.html?id=${id}" class="btns">Editar</a>
+      <a href="/assets/screens/editarProducto.html?id=${id}" class="btns">Editar</a>
 
     </div>
     `
@@ -38,8 +38,8 @@ const table = document.querySelector('[data-productos]');
 
 productosServices.lista_productos().then((data)=>{
     //console.log(data);
-    data.forEach(({name,price,id,url})=>{
-        const nuevaLinea = crearNuevaSeccion(name,price,id,url);
+    data.forEach(({url, name, price,id})=>{
+        const nuevaLinea = crearNuevaSeccion(url,name,price,id);
         table.appendChild(nuevaLinea)
     })
 }).catch((error)=> console.log("Ocurrio un error: ",error))

@@ -1,11 +1,10 @@
 import { productosServices } from "../services/productos-service.js";
 const formulario = document.querySelector('[data-form]');
+console.log(formulario)
 const obtenerInformacion = async () => {
     const url = new URL(window.location);
-    console.log(url);
     const id = url.searchParams.get("id");
-    console.log(id);
-    if (id == null){
+    if (id == null) {
         //window.location.href = '';
         console.log("Error");
     }
@@ -13,29 +12,38 @@ const obtenerInformacion = async () => {
     const nombre = document.querySelector('[data-nombre]');
     const precio = document.querySelector('[data-precio]');
     const descripcion = document.querySelector('[data-descripcion]');
-    try{
-        const producto = await productosServices.detalleProducto(id);
-        if (producto.nombre){
-            urlimagen.value = producto.url;
-            nombre.value = producto.nombre;
-            precio.value = producto.precio;
-            descripcion.value = producto.descripcion;
+    try {
+        const product = await productosServices.detalleProducto(id);
+        console.log(product);
+
+        if (product.name) {
+            urlimagen.value = product.url;
+            nombre.value = product.name;
+            precio.value = product.price;
+            descripcion.value = product.description;
+            console.log(urlimagen.value);
         }
-    }catch(error){
+    } catch (error) {
         console.log("error catch");
     }
-};
+}
 obtenerInformacion();
-formulario.addEventListener('submit',(event) =>{
-    event.preventDefault();
+const form = document.getElementById('update-product-form');
+form.addEventListener('submit', (event) => {
+    event.preventDefault(); // para evitar recarga de pagina
     const url = new URL(window.location);
     const id = url.searchParams.get('id');
-    const urlImagen = document.querySelector('[data-url]').value;
-    const nombre = document.querySelector('[data-nombre]').value;
-    const precio = document.querySelector('[data-precio]').value;
-    const descripcion = document.querySelector('[data-descripcion]').value;
-    productosServices.actualizarProducto(urlImagen,nombre,precio,descripcion,id).then(() =>{
-        window.location.href='edicionCompleta.html';
+    const updatedProduct = {
+        url: form.elements.url.value,
+        name: form.elements.name.value,
+        price: form.elements.price.value,
+        description: form.elements.description.value
+    }
+    console.log(updatedProduct);
+    productosServices.updateProduct(id, updatedProduct).then(() => {
+        window.location.href='/assets/screens/edicionCompleta.html';
+
         console.log("Edicion satisfactoria");
+
     });
 });

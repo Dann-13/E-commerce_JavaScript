@@ -35,7 +35,7 @@ async function updateProduct(productId, updatedProduct) {
 async function searchProduct(productName) {
     try {
 
-        const response = await fetch(`http://localhost:3000/products?name=${productName}`);
+        const response = await fetch(`http://localhost:3000/products?name_like=${productName}`);
         const data = await response.json();
         if (data.length > 0) {
             //const product = data.find(product => product.name.match(new RegExp(productName, 'i'))); console.log(product);

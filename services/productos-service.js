@@ -1,11 +1,11 @@
 const lista_productos = () => fetch("http://localhost:3000/products").then(response => response.json());
-const nuevo_Producto = (url, name, price, description) => {
+const nuevo_Producto = (url, name, price, description,category) => {
     return fetch("http://localhost:3000/products", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({ url, name, price, description, id: uuid.v4() })
+        body: JSON.stringify({ url, name, price, description,category, id: uuid.v4() })
     })
 };
 const eliminarProducto = (id) => {

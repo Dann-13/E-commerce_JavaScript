@@ -27,6 +27,14 @@
       "price": "50000",
       "description": "Juego halo 6 Xbox",
       "id": "0ae1ed57-e18e-440f-be0e-10c676f64b9c"
+    },
+    {
+      "url": "https://cf.shopee.com.co/file/014d3c45cb14cfed8e1f098c273b730a",
+      "name": "Juguetes varios",
+      "price": "5000",
+      "description": "Jugutes variados",
+      "category": "Juguetes",
+      "id": "2dec8ae8-0e81-4509-8be8-b089b39d1a6b"
     }
   ]
 }

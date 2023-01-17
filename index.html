@@ -5,346 +5,157 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/base/reset.css">
-    <link rel="stylesheet" href="assets/css/componentes/main.css">
-    <link rel="stylesheet" href="assets/css/componentes/form.css">
-    <link rel="stylesheet" href="assets/css/componentes/footer.css">
-    <link rel="stylesheet" href="assets/css/componentes/responsive.css">
-    <link rel="stylesheet" href="assets/css/componentes/productos.css">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/base/reset.css">
+    <link rel="stylesheet" href="/assets/css/style-index/footer.css">
+    <link rel="stylesheet" href="/assets/css/style-index/index.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&family=Montserrat:wght@300;400;700&display=swap"
+        rel="stylesheet">
     <title>E-Commerce</title>
 </head>
 
-<body class="app">
+<body>
     <section class="encabezado">
-        <div class="container">
-            <div class="logo">
-                <img src="assets/img/logos.svg" alt="" class="imgLogo">
+        <div class="">
+            <div class="container__logo">
+                <div class="logo">
+
+                </div>
             </div>
-            <div class="buscador">
-                <input type="text" name="buscador" id="buscador" class="inputBuscador" placeholder="¿Que decea buscar?">
-                <svg width="30" height="30" viewBox="0 0 18 18" fill="none" class="logo__buscador" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12.4999 11H11.7099L11.4299 10.73C12.6299 9.33 13.2499 7.42 12.9099 5.39C12.4399 2.61 10.1199 0.39 7.31989 0.05C3.08989 -0.47 -0.470107 3.09 0.0498932 7.32C0.389893 10.12 2.60989 12.44 5.38989 12.91C7.41989 13.25 9.32989 12.63 10.7299 11.43L10.9999 11.71V12.5L15.2499 16.75C15.6599 17.16 16.3299 17.16 16.7399 16.75C17.1499 16.34 17.1499 15.67 16.7399 15.26L12.4999 11ZM6.49989 11C4.00989 11 1.99989 8.99 1.99989 6.5C1.99989 4.01 4.00989 2 6.49989 2C8.98989 2 10.9999 4.01 10.9999 6.5C10.9999 8.99 8.98989 11 6.49989 11Z" fill="#464646"/>
-                </svg>
+            <button id="menuButton">Menú</button>
+            <ul id="menuList">
+                <li>Home</li>
+                <li>Products</li>
+                <li>About us</li>
+            </ul>
+
+
+        </div>
+        <div id="contenedor">
+            <img src="/assets/img/banner.jpg" alt="Mi Imagen">
+            <p>GREAT OFFERS ON
+                MOBILES
+                FLAT 35% DISCOUNT</p>
+        </div>
+        <div id="contenedor__list">
+            <div class="contenedor__list__category">
+                <div class="contenenedor__tiulo">
+                    <h1>Categories</h1>
+                    <button class="opcionesButton" id="opcionesButton">+</button>
+
+                </div>
+
+                <ul class="opcionesList" id="opcionesList">
+                    <h1>Products</h1>
+                    <li><a href="">Juguetes</a></li>
+                    <li>Gammer</li>
+                    <li>Deporte</li>
+                </ul>
             </div>
-            <div class="btnLogin">
-                <a href="/assets/screens/login.html" class="Login">Login</a>
+            <div class="contenedor__publicidad">
+                <div id="contenedor__publicidad__img">
+                    <img src="/assets/img/publicidad.jpg" alt="Imagen Publicidad">
+                    <p>GREAT OFFERS ON
+                        Sports
+                    </p>
+                </div>
+                <div id="contenedor__publicidad__img">
+                    <img src="/assets/img/publicidad2.jpeg" alt="Imagen Publicidad">
+                    <p>GREAT OFFERS ON
+                        Sports
+                </div>
             </div>
         </div>
+        <section class="section__publicidad">
 
+        </section>
+        <section class="products-section">
+            <div class="product-grid">
+                <div class="seleccion">
+                    <h2>Busca Tus Productos por Categoria</h2>
+                    <select>
+                        <option value="option1">Juguetes</option>
+                        <option value="option2">Gammer</option>
+                        <option value="option3">Deporte</option>
+                    </select>
+
+                </div>
+                <div class="product-list">
+                    <div class="product-item">
+                        <img src="product1.jpg" alt="Product 1">
+                        <h3>Product 1</h3>
+                        <p>Description of product 1</p>
+                        <button>Add to cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="/assets/img/publicidad.jpg" alt="Product 2">
+                        <h3>Product 2</h3>
+                        <p>Description of product 2</p>
+                        <button>Add to cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="product3.jpg" alt="Product 3">
+                        <h3>Product 3</h3>
+                        <p>Description of product 3</p>
+                        <button>Add to cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="product3.jpg" alt="Product 3">
+                        <h3>Product 4</h3>
+                        <p>Description of product 3</p>
+                        <button>Add to cart</button>
+                    </div>
+                    
+                    <!-- more product items -->
+                </div>
+
+            </div>
+        </section>
     </section>
     <main class="contenido">
-        <div class="banner">
-            <div class="banner-info">
-                <p class="elemento-banner-info1">Febrero Promocional</p>
-                <p class="elemento-banner-info2">Productos seleccionados con 33 de descuento</p>
-                <button class="btn-ver">Promociones</button>
-            </div>
-        </div>
-        <section class="productos">
-            <div class="container">
-                <div class="productos__items">
-                    <div class="productos__info">
-                        <div class="productos__header">
-                            <h2 class="productos__titulo">Boxeo</h2>
-                            <a href="" class="productos__boton">Ver todo</a>
-                        </div>
-                    </div>
-                    <div class="productos__contenido">
-                        <div class="productos__card">
-                            <img class="productos__card___imagen" src="assets/img/boxeo1.jpg" alt="" srcset="">
-                            <div class="productos__card___base">
-                                <div class="productos__card___header">
-                                    <h5 class="productos__card___titulo">Vendas Boxeo</h5>
-                                    <p class="productos__card___precio">$30.000</p>
-                                </div>
-                                <div class="productos__card___descripcion">
-                                    <a href="" class="productos__card___ver">Ver Producto</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="productos__card">
-                            <img class="productos__card___imagen" src="assets/img/boxeo2.jpg" alt="" srcset="">
-                            <div class="productos__card___base">
-                                <div class="productos__card___header">
-                                    <h5 class="productos__card___titulo">Guantes Boxeo</h5>
-                                    <p class="productos__card___precio">$30.000</p>
-                                </div>
-                                <div class="productos__card___descripcion">
-                                    <a href="" class="productos__card___ver">Ver Producto</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="productos__card">
-                            <img class="productos__card___imagen" src="assets/img/boxeo3.jpg" alt="" srcset="">
-                            <div class="productos__card___base">
-                                <div class="productos__card___header">
-                                    <h5 class="productos__card___titulo">Casco Protector</h5>
-                                    <p class="productos__card___precio">$30.000</p>
-                                </div>
-                                <div class="productos__card___descripcion">
-                                    <a href="" class="productos__card___ver">Ver Producto</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="productos__card">
-                            <img class="productos__card___imagen" src="assets/img/boxeo4.jpg" alt="" srcset="">
-                            <div class="productos__card___base">
-                                <div class="productos__card___header">
-                                    <h5 class="productos__card___titulo">Saco de Entrenamiento</h5>
-                                    <p class="productos__card___precio">$30.000</p>
-                                </div>
-                                <div class="productos__card___descripcion">
-                                    <a href="" class="productos__card___ver">Ver Producto</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="productos__card">
-                            <img class="productos__card___imagen" src="assets/img/boxeo5.jpg" alt="" srcset="">
-                            <div class="productos__card___base">
-                                <div class="productos__card___header">
-                                    <h5 class="productos__card___titulo">Kit Entreno</h5>
-                                    <p class="productos__card___precio">$30.000</p>
-                                </div>
-                                <div class="productos__card___descripcion">
-                                    <a href="" class="productos__card___ver">Ver Producto</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="productos__card">
-                            <img class="productos__card___imagen" src="assets/img/boxeo6.jpg" alt="" srcset="">
-                            <div class="productos__card___base">
-                                <div class="productos__card___header">
-                                    <h5 class="productos__card___titulo">Pao de velocidad boxeo (x2)</h5>
-                                    <p class="productos__card___precio">$30.000</p>
-                                </div>
-                                <div class="productos__card___descripcion">
-                                    <a href="" class="productos__card___ver">Ver Producto</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="productos__items">
-                    <div class="productos__info">
-                        <div class="productos__header">
-                            <h2 class="productos__titulo">Futbol</h2>
-                            <a href="" class="productos__boton">Ver todo</a>
-                        </div>
-                    </div>
-                    <div class="productos__contenido">
-                        <div class="productos__card">
-                            <img class="productos__card___imagen" src="assets/img/futbol1.png" alt="" srcset="">
-                            <div class="productos__card___base">
-                                <div class="productos__card___header">
-                                    <h5 class="productos__card___titulo">Camiseta Seleccion Colombia</h5>
-                                    <p class="productos__card___precio">$30.000</p>
-                                </div>
-                                <div class="productos__card___descripcion">
-                                    <a href="" class="productos__card___ver">Ver Producto</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="productos__card">
-                            <img class="productos__card___imagen" src="assets/img/futbol2.webp" alt="" srcset="">
-                            <div class="productos__card___base">
-                                <div class="productos__card___header">
-                                    <h5 class="productos__card___titulo">Balon de Futbol</h5>
-                                    <p class="productos__card___precio">$30.000</p>
-                                </div>
-                                <div class="productos__card___descripcion">
-                                    <a href="" class="productos__card___ver">Ver Producto</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="productos__card">
-                            <img class="productos__card___imagen" src="assets/img/futbol3.png" alt="" srcset="">
-                            <div class="productos__card___base">
-                                <div class="productos__card___header">
-                                    <h5 class="productos__card___titulo">Camisa Seleccion Argentina</h5>
-                                    <p class="productos__card___precio">$30.000</p>
-                                </div>
-                                <div class="productos__card___descripcion">
-                                    <a href="" class="productos__card___ver">Ver Producto</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="productos__card">
-                            <img class="productos__card___imagen" src="assets/img/futbol4.png" alt="" srcset="">
-                            <div class="productos__card___base">
-                                <div class="productos__card___header">
-                                    <h5 class="productos__card___titulo">Medias Futbol</h5>
-                                    <p class="productos__card___precio">$30.000</p>
-                                </div>
-                                <div class="productos__card___descripcion">
-                                    <a href="" class="productos__card___ver">Ver Producto</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="productos__card">
-                            <img class="productos__card___imagen" src="assets/img/futbol5.jpg" alt="" srcset="">
-                            <div class="productos__card___base">
-                                <div class="productos__card___header">
-                                    <h5 class="productos__card___titulo">Camisa Millonarios</h5>
-                                    <p class="productos__card___precio">$30.000</p>
-                                </div>
-                                <div class="productos__card___descripcion">
-                                    <a href="" class="productos__card___ver">Ver Producto</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="productos__card">
-                            <img class="productos__card___imagen" src="assets/img/futbol6.jpg" alt="" srcset="">
-                            <div class="productos__card___base">
-                                <div class="productos__card___header">
-                                    <h5 class="productos__card___titulo">Zapatillas</h5>
-                                    <p class="productos__card___precio">$30.000</p>
-                                </div>
-                                <div class="productos__card___descripcion">
-                                    <a href="" class="productos__card___ver">Ver Producto</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="productos__items">
-                    <div class="productos__info">
-                        <div class="productos__header">
-                            <h2 class="productos__titulo">Diversos</h2>
-                            <a href="" class="productos__boton">Ver todo</a>
-                        </div>
-                    </div>
-                    <div class="productos__contenido">
-                        <div class="productos__card">
-                            <img class="productos__card___imagen" src="assets/img/baloncesto1.png" alt="" srcset="">
-                            <div class="productos__card___base">
-                                <div class="productos__card___header">
-                                    <h5 class="productos__card___titulo">Balon Baloncesto</h5>
-                                    <p class="productos__card___precio">$30.000</p>
-                                </div>
-                                <div class="productos__card___descripcion">
-                                    <a href="" class="productos__card___ver">Ver Producto</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="productos__card">
-                            <img class="productos__card___imagen" src="assets/img/baloncesto2.png" alt="" srcset="">
-                            <div class="productos__card___base">
-                                <div class="productos__card___header">
-                                    <h5 class="productos__card___titulo">Camisa lakers</h5>
-                                    <p class="productos__card___precio">$30.000</p>
-                                </div>
-                                <div class="productos__card___descripcion">
-                                    <a href="" class="productos__card___ver">Ver Producto</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="productos__card">
-                            <img class="productos__card___imagen" src="assets/img/tenis1.png" alt="" srcset="">
-                            <div class="productos__card___base">
-                                <div class="productos__card___header">
-                                    <h5 class="productos__card___titulo">Pelota Tenis</h5>
-                                    <p class="productos__card___precio">$30.000</p>
-                                </div>
-                                <div class="productos__card___descripcion">
-                                    <a href="" class="productos__card___ver">Ver Producto</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="productos__card">
-                            <img class="productos__card___imagen" src="assets/img/voleibol1.png" alt="" srcset="">
-                            <div class="productos__card___base">
-                                <div class="productos__card___header">
-                                    <h5 class="productos__card___titulo">Balon Voleibol</h5>
-                                    <p class="productos__card___precio">$30.000</p>
-                                </div>
-                                <div class="productos__card___descripcion">
-                                    <a href="" class="productos__card___ver">Ver Producto</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="productos__card">
-                            <img class="productos__card___imagen" src="assets/img/natacion1.jpg" alt="" srcset="">
-                            <div class="productos__card___base">
-                                <div class="productos__card___header">
-                                    <h5 class="productos__card___titulo">Gafas Natacion</h5>
-                                    <p class="productos__card___precio">$30.000</p>
-                                </div>
-                                <div class="productos__card___descripcion">
-                                    <a href="" class="productos__card___ver">Ver Producto</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="productos__card">
-                            <img class="productos__card___imagen" src="assets/img/beisbol.jpg" alt="" srcset="">
-                            <div class="productos__card___base">
-                                <div class="productos__card___header">
-                                    <h5 class="productos__card___titulo">Pelota Beisbol</h5>
-                                    <p class="productos__card___precio">$30.000</p>
-                                </div>
-                                <div class="productos__card___descripcion">
-                                    <a href="" class="productos__card___ver">Ver Producto</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="formulario">
-            <div class="container">
-                <div class="formulario__class">
-                    <div class="formulario__1">
-                        <div class="formulario__logo">
-                            <img src="assets/img/logos.svg" alt="" srcset="" class="logo__form">
-                        </div>
-                        <div class="info">
-                            <a href="" class="info__elemento">Quienes Somos</a>
-                            <a href="" class="info__elemento">Politicas de Privacidad</a>
-                            <a href="" class="info__elemento">Programa de fidelidad</a>
-                            <a href="" class="info__elemento">Nuestras tiendas</a>
-                            <a href="" class="info__elemento">Quiero ser franquisiado</a>
-                            <a href="" class="info__elemento1">Anuncie Aqui</a>
-                        </div>
-                    </div>
-                    <div class="formulario__div">
-                        <ul>
-                            <li class="detallesContacto-Titulos">Hable Con nosotros</li>
-                            <li>
-                                <form action="" class="formulario-Contacto">
-                                    <div class="elemento">
-                                        <label for="nombre">Nombre</label>
-                                        <input id="nombre" type="text" id="name" name="user_name" placeholder="Escribe aquí tu nombre">
-                                    </div>
-                                    <div class="elemento">
-                                        <label for="title" class="form-label">Mensaje</label>
-                                        <textarea name="mensaje" class="mensaje" id="" cols="30" rows="5"
-                                            placeholder="Escriba su Mensaje"></textarea>
-                                    </div>
-                                    <div class="elemento">
-                                        <button class="btn-enviarMensaje" id="enviar" type="submit" >Enviar Mensaje</button>
-                                    </div>
-                                </form>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
     <footer class="rodapePrincipal">
-        <div class="container">
-            <section class="rodapePrincipal-list">
-                <ul class="footer-list">
-                    <li class="itemfooter-list">Desarrollado Por: Daniel Gomez </li>
-                    <li class="itemfooter-list">2022</li>
+        <div class="contenedor__footer-list">
+            <div class="contenedor__footer__items" id="contenedor__footer__items">
+                <h2>Contactos</h2>
+                <p>Puedes contactarnos atraves de las siguentes opciones</p>
+                <ul class="direcciones">
+                    <li>Direccion del Local</li>
+                    <li>danny13bay@gmail.com</li>
+                    <li>Telefono</li>
                 </ul>
-            </section>
+            </div>
+            <div class="contenedor__footer__items">
+                <h2>Information</h2>
+                <ul class="info">
+                    <li><a href="">Sobre Nosotros</a></li>
+                    <li><a href="">Contactanos</a></li>
+                    <li><a href="">Productos Especiales</a></li>
+                </ul>
+            </div>
+            <div class="contenedor__footer__items">
+                <h2>Profile</h2>
+                <ul class="info">
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="">Ofertas</a></li>
+                </ul>
+                <div class="redes">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </footer>
+    <script src="/assets/css/stylesJs/menu.js"></script>
+    <script type="Module" src="/controllers/producto-controller.js"></script>
+    <script type="Module" src="/services/searchProductServices.js"></script>
+    <script type="Module" src="/controllers/searchProduct.js"></script>
+
 </body>
 
 </html>

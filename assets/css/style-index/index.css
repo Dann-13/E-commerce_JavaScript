@@ -238,7 +238,8 @@ body {
     padding-bottom: 10px;
 
 }
-.product-item button{
+
+.product-item button {
     font-size: 14px;
     color: #000;
     margin: 0;
@@ -306,10 +307,12 @@ body {
     #menuList {
         justify-content: space-evenly !important;
     }
-    #menuList li{
+
+    #menuList li {
         padding-top: 10px;
         padding-bottom: 10px;
     }
+
     #contenedor__list {
         flex-direction: row !important;
         padding: 0 70px 0 70px;
@@ -337,15 +340,23 @@ body {
     .products-section {
         padding: 40px 0 40px 0;
     }
-    .seleccion{
+
+    .seleccion {
         margin-bottom: 25px;
     }
+
     .seleccion select {
         width: 200px;
         text-align: center;
         outline: none;
     }
-    .product-list{
+
+    .product-list {
         grid-template-columns: repeat(3, 1fr);
+    }
+    .product-item img {
+        padding-bottom: 15px;
+        max-width: 80%;
+        max-height: 200px;
     }
 }

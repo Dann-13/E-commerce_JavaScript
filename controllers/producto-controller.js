@@ -13,6 +13,7 @@ const crearNuevaSeccion = (url, name, price,id) => {
     </div>
     <div class="precio">
       <p>${price}</p>
+      
     </div>
     <div class="btn">
       <button class="btns" type="button" id="${id}">Eliminar</button>

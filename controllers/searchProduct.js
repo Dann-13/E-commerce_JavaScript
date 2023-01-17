@@ -7,7 +7,6 @@ form.addEventListener("submit",(event) => {
     console.log(productName);
     if(productName != ""){
         let mySection = document.getElementById("mySection");
-        console.log(mySection);
         while (mySection.firstChild) {
             mySection.removeChild(mySection.firstChild);
         }

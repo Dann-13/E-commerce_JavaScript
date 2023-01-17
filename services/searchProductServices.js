@@ -1,41 +1,40 @@
-async function searchProduct(productName) {
+//listamos los productos en la pagina
+const lista_productos = () => fetch("http://localhost:3000/products").then(response => response.json());
+//filtramos un producto por categoria
+async function searchProduct(category) {
     try {
 
-        const response = await fetch(`http://localhost:3000/products?name_like=${productName}`);
+        const response = await fetch(`http://localhost:3000/products?${category}`);
         const data = await response.json();
-        if (data.length > 0) {
-            //const product = data.find(product => product.name.match(new RegExp(productName, 'i'))); console.log(product);
+        //si la categoria sellecionada es diferente de todos que me enseñe los productos indicados
+        if (category != "todos") {
             for (let key in data) {
-                if (data[key].name.match(new RegExp(productName, 'i'))) {
+                if (data[key].category.match(new RegExp(category, 'i'))) {
                     const product = data[key];
-                    //va lo mio
-                    const productResults = document.querySelector('.productos__items');
-                    productResults.classList.add("container");
-                    const contenido = `
-                    <div class="imagen">
-                      <img src="${product.url}" alt="" class="imagen__Producto">
-                    </div>
-                    <div class="nombre">
-                        <p>${product.name}</p>
-                    </div>
-                    <div class="precio">
-                        <p>${product.price}</p>
-                    </div>
-                    <div class="btn">
-                        <button class="btns" type="button" id="${product.id}">Eliminar</button>
-                        <a href="/editarProducto.html?id=${product.id}" class="btns">Editar</a>
-
-                    </div>
+                    console.log(product);
+                    const productResults = document.querySelector('.product-list');
+                    const seccion = document.createElement("div");
+                    seccion.classList.add("product-item");
+                    productResults.appendChild(seccion);
+                    const productos = `
+                    <img src="${product.url}" alt="Product 2">
+                    <h3>${product.name}</h3>
+                    <p>${product.price}</p>
+                    <button>Add to cart</button>
                     `
-                    productResults.innerHTML = contenido;
-
-
+                    seccion.innerHTML = productos;
                 }
             }
-        } else {
-            console.log("No se encontro Producto");
+        } else {//en caso contrario selecciono todos los productos
+            console.log("Todos")
+            lista_productos().then((data)=>{
+                data.forEach(product => {
+                    console.log(product.name);
+                });
+            })
         }
-    } catch (err) {
+
+    } catch (err) { //Manejo de Errores
         console.log(err);
     }
 }
@@ -43,4 +42,5 @@ async function searchProduct(productName) {
 
 export const productosServices = {
     searchProduct,
+    lista_productos
 }

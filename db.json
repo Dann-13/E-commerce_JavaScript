@@ -1,40 +1,28 @@
 {
   "products": [
     {
-      "url": "https://estaticos-cdn.sport.es/clip/cc1f1efe-5198-459e-8e27-9d07d852a94b_alta-libre-aspect-ratio_default_0.jpg",
-      "name": "Copa del Mundo",
-      "price": "50000",
-      "description": "Una copita del Mundo",
-      "id": "e03a026a-ba12-4af3-a6e5-4a1b6d54a4f1"
-    },
-    {
-      "url": "https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2022/10/super-mario-bros-2-scaled.jpg?fit=1200%2C682&quality=60&strip=all&ssl=1",
-      "name": "Jueguete mario",
-      "price": "50000",
-      "description": "holaa",
-      "id": "82becf41-86db-4e7f-a873-bdf03e36ea95"
-    },
-    {
-      "url": "data:image/jpeg;base64,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",
-      "name": "Control Pc",
-      "price": "450000",
-      "description": "Control para pc",
-      "id": "da7a0b72-d873-426f-baee-b4d15be01021"
-    },
-    {
-      "url": "https://assets.xboxservices.com/assets/95/eb/95eb973b-006b-4533-8902-f5a3f8dfd955.jpg?n=Halo-Infinite_GLP-Page-Hero-0_1083x609.jpg",
-      "name": "Juego Halo 6",
-      "price": "50000",
-      "description": "Juego halo 6 Xbox",
-      "id": "0ae1ed57-e18e-440f-be0e-10c676f64b9c"
-    },
-    {
-      "url": "https://cf.shopee.com.co/file/014d3c45cb14cfed8e1f098c273b730a",
-      "name": "Juguetes varios",
-      "price": "5000",
-      "description": "Jugutes variados",
+      "url": "https://store-images.s-microsoft.com/image/apps.50670.13727851868390641.c9cc5f66-aff8-406c-af6b-440838730be0.d205e025-5444-4eb1-ae46-571ae6895928?q=90&w=480&h=270",
+      "name": "Halo",
+      "price": "500000",
+      "description": "Juguete de Halo",
       "category": "Juguetes",
-      "id": "2dec8ae8-0e81-4509-8be8-b089b39d1a6b"
+      "id": "f8120a6e-267d-4e96-adae-afee50618983"
+    },
+    {
+      "url": "https://www.eltiempo.com/files/article_multimedia/uploads/2021/03/22/60592c7a12b26.jpeg",
+      "name": "Camisa Seleccion Colombia",
+      "price": "1250000",
+      "description": "Camisa Seleccion Colombia",
+      "category": "Deporte",
+      "id": "58e5f2c4-529d-4c21-87c4-805fe41846a3"
+    },
+    {
+      "url": "https://store-images.s-microsoft.com/image/apps.25609.65595136073047161.857e51a5-2b52-4c0e-8ac2-92b6b4609fc2.6df5069b-fe9a-436c-875c-9e14f0d754a1?q=90&w=480&h=270",
+      "name": "Juego de Gears",
+      "price": "125000",
+      "description": "Juego de Gears 3",
+      "category": "Gamer",
+      "id": "0b745d75-9a40-442e-bf0d-fb5fa2381f45"
     }
   ]
 }

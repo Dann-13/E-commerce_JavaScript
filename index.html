@@ -11,26 +11,35 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&family=Montserrat:wght@300;400;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <script src="https://kit.fontawesome.com/b049437614.js" crossorigin="anonymous"></script>
+
     <title>E-Commerce</title>
 </head>
 
 <body>
     <section class="encabezado">
         <div class="">
-            <div class="container__logo">
-                <div class="logo">
 
+            <div class="container__encabezado__opciones">
+                <button><i class="icono__user fa-regular fa-circle-user"></i></button>
+                <div class="container__logo">
+                    <div class="logo">
+                    </div>
                 </div>
+                <button><i class="icono__carrito fa-solid fa-cart-plus"></i></button>
             </div>
             <button id="menuButton">Menú</button>
             <ul id="menuList">
-                <li>Home</li>
+                <li><a href="#">Home</a></li>
                 <li>Products</li>
-                <li>About us</li>
+                <li><a href="/assets/screens/login.html"> Loguin</a></li>
             </ul>
+    </section>
 
-
-        </div>
+    </div>
+    <main class="contenido">
         <div id="contenedor">
             <img src="/assets/img/banner.jpg" alt="Mi Imagen">
             <p>GREAT OFFERS ON
@@ -86,8 +95,6 @@
 
             </div>
         </section>
-    </section>
-    <main class="contenido">
 
     </main>
     <footer class="rodapePrincipal">
@@ -126,6 +133,9 @@
             </div>
         </div>
     </footer>
+    <div class="conteiner__carrito__card">
+        
+    </div>
     <script src="/assets/css/stylesJs/menu.js"></script>
     <script type="Module" src="/controllers/controllers-products/product-controller.js"></script>
     <script type="Module" src="/controllers/controllers-products/filter.js"></script>

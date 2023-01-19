@@ -4,6 +4,7 @@ const menuList = document.getElementById("menuList");
 menuButton.addEventListener("click", function() {
   if (menuList.style.display === "none") {
     menuList.style.display = "block";
+    
   } else {
     menuList.style.display = "none";
   }
@@ -13,9 +14,6 @@ const opcionesButton = document.getElementById("opcionesButton");
 const opcionesList = document.getElementById("opcionesList");
 
 opcionesButton.addEventListener("click", function() {
-  if (opcionesList.style.display === "none") {
-    opcionesList.style.display = "block";
-  } else {
-    opcionesList.style.display = "none";
-  }
+  opcionesList.classList.toggle("active");
 });
+

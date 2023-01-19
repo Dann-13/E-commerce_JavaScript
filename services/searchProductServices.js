@@ -27,11 +27,24 @@ async function searchProduct(category) {
             }
         } else {//en caso contrario selecciono todos los productos
             console.log("Todos")
-            lista_productos().then((data)=>{
+            lista_productos().then((data) => {
                 data.forEach(product => {
+                    const seleccion = document.getElementById("product-list");
                     console.log(product.name);
-                });
-            })
+                    const seccion = document.createElement("div");
+                    seccion.classList.add("product-item");
+                    const productos =`
+                    <img src="${product.url}" alt="Product 2">
+                    <h3>${product.name}</h3>
+                    <p>${product.price}</p>
+                    <button>Add to cart</button>
+                    `;
+                    seccion.innerHTML = productos;
+                    seleccion.appendChild(seccion);
+                })
+            }).catch(err => {
+                console.error(err);
+            });
         }
 
     } catch (err) { //Manejo de Errores

@@ -8,7 +8,6 @@ body {
 }
 .container__encabezado__opciones{
     display: flex;
-    justify-content: space-around;
     align-items: center;
 }
 .container__encabezado__opciones button{
@@ -16,11 +15,12 @@ body {
 }
 .icono__user{
     font-size: 30px;
+    display: none;
 }
 .icono__carrito{
-    position: fixed;
     z-index: 10;
     font-size: 30px;
+    cursor: pointer;
 }
 .logo {
     width: 200px;
@@ -262,14 +262,14 @@ body {
 
 .product-item button {
     font-size: 14px;
-    color: #000;
     margin: 0;
     text-decoration: none;
     text-transform: capitalize;
     padding: 0.5em 1.5em;
     border: 1px solid #c1c1c1;
     border-radius: 5px;
-    background: transparent;
+    background-color: #3C43A4;
+    color: #fff;
     outline: none;
     -webkit-transition: .5s all;
     -moz-transition: .5s all;
@@ -280,6 +280,7 @@ body {
 .rodapePrincipal .container {
     padding: 15px;
 }
+
 @media screen and (max-width: 768px){
     .seleccion {
         padding: 0 15px 0 15px;
@@ -295,6 +296,12 @@ body {
         justify-content: space-around;
         padding-top: 10px;
         padding-bottom: 10px;
+    }
+    .icono__user{
+        display: block;
+    }
+    .container__encabezado__opciones{
+        justify-content: space-around;
     }
 
     #contenedor {

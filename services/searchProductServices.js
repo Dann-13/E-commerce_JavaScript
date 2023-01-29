@@ -37,7 +37,7 @@ async function searchProduct(category) {
                     <img src="${product.url}" alt="Product 2">
                     <h3>${product.name}</h3>
                     <p>${product.price}</p>
-                    <button>Add to cart</button>
+                    <button class="btn-cart">Add to cart</button>
                     `;
                     seccion.innerHTML = productos;
                     seleccion.appendChild(seccion);

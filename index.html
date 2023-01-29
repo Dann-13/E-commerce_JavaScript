@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/assets/css/base/reset.css">
     <link rel="stylesheet" href="/assets/css/style-index/footer.css">
     <link rel="stylesheet" href="/assets/css/style-index/index.css">
+    <link rel="stylesheet" href="/assets/css/style-index/indexCarrito.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&family=Montserrat:wght@300;400;700&display=swap"
         rel="stylesheet">
@@ -28,7 +29,8 @@
                     <div class="logo">
                     </div>
                 </div>
-                <button><i class="icono__carrito fa-solid fa-cart-plus"></i></button>
+                <button id="btnModal"><i class="icono__carrito fa-solid fa-cart-plus"></i></button>
+        
             </div>
             <button id="menuButton">Menú</button>
             <ul id="menuList">
@@ -133,12 +135,19 @@
             </div>
         </div>
     </footer>
-    <div class="conteiner__carrito__card">
-        
+    
+    <div id="myModal" class="modalContainer">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2>Modal</h2>
+            <p>Se ha desplegado el modal y bloqueado el scroll del body!</p>
+        </div>
     </div>
-    <script src="/assets/css/stylesJs/menu.js"></script>
-    <script type="Module" src="/controllers/controllers-products/product-controller.js"></script>
-    <script type="Module" src="/controllers/controllers-products/filter.js"></script>
+
+    <script src="/assets/css/style-index/stylesJs/menu.js"></script>
+    <script type="Module" src="/controllers/controllers-products-index/product-controller.js"></script>
+    <script type="Module" src="/controllers/controllers-products-index/filter.js"></script>
+    <script type="Module" src="/assets/css/style-index/stylesJs/carrito.js"></script>
 </body>
 
 </html>

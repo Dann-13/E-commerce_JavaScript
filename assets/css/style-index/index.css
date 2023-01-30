@@ -280,6 +280,10 @@ body {
 .rodapePrincipal .container {
     padding: 15px;
 }
+.modal-content{
+    overflow: scroll;
+    height: 200px;
+}
 
 @media screen and (max-width: 768px){
     .seleccion {
@@ -305,7 +309,6 @@ body {
     }
 
     #contenedor {
-        overflow: hidden;
     }
 
     #contenedor img {

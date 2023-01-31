@@ -308,9 +308,6 @@ body {
         justify-content: space-around;
     }
 
-    #contenedor {
-    }
-
     #contenedor img {
         object-fit: cover;
         height: 300px;

@@ -13,12 +13,20 @@ container.addEventListener('click', event => {
                 const productResults = document.querySelector('.product__list');
                 //Creamos un nuevo elemento dentro del contenedor 
                 const seccion = document.createElement("div");
-                seccion.classList.add("product-item");
+                seccion.classList.add("product__item__carrito");
                 productResults.appendChild(seccion);
                 const productos = `
-                    <img src="${product.url}" alt="Product 2">
-                    <h3>${product.name}</h3>
-                    <p>${product.price}</p>`
+                    <div class="product__img__contenedor">
+                    <img class="product__img__carrito" src="${product.url}" alt="Product 2">
+                    </div>
+                    <h3 class="product__name__carrito">${product.name}</h3>
+                    <div class="product__contador__carrito">
+                        <button class="btn__contador" onclick="addToCart()">+</button>
+                            <span id="cart-count">0</span>
+                        <button class="btn__contador" onclick="removeFromCart()">-</button>
+                    </div>
+                    `
+                    //<p class="product__price__carrito">${product.price}</p>
                     seccion.innerHTML = productos;
 
             } catch (err) {

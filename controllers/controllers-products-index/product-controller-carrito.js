@@ -1,12 +1,17 @@
 import { productosServices } from '../../services/productos-service.js';
 const container = document.getElementById('product-list');
+//Lista para verificar cuantos productos se estan agregado al carrito
+export let estan = [];
 container.addEventListener('click', event => {
     if (event.target.matches('.get-product')) {
         const productId = event.target.getAttribute('data-product-id');
-        console.log(productId);
+        console.log(event.target);
+
+        //Obtenemos la informacion del producto seleccionado por su aid
 
         const obtenerInformacion = async () => {
             try {
+                //Hacemos el llmado del producto por su id
                 const product = await productosServices.detalleProducto(productId);
                 console.log(product.name);
                 //Seleccionamos el div contendor de productos del carrito
@@ -24,10 +29,14 @@ container.addEventListener('click', event => {
                         <button class="btn__contador" onclick="addToCart()">+</button>
                             <span id="cart-count">0</span>
                         <button class="btn__contador" onclick="removeFromCart()">-</button>
+                        <button class="btn__delete__carrito"><i class="fa-sharp fa-solid fa-trash"></i></button>
                     </div>
                     `
-                    //<p class="product__price__carrito">${product.price}</p>
-                    seccion.innerHTML = productos;
+                seccion.innerHTML = productos;
+
+                //Mensaje de Agregar producto satisfactorio
+
+                estan.push(product);
 
             } catch (err) {
                 console.log(err);

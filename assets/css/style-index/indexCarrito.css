@@ -50,7 +50,6 @@
     text-transform: uppercase;
     text-align: center;
     font-family: 'Glegoo', serif;
-
 }
 
 .product__item__carrito {
@@ -87,11 +86,11 @@
     border-radius: 50%;
     color: #ffffff;
     display: inline-block;
-    font-size: 14px;
-    height: 30px;
-    line-height: 30px;
+    font-size: 11px;
+    height: 20px;
+    line-height: 20px;
     text-align: center;
-    width: 30px;
+    width: 20px;
 }
 
 .btn__contador {
@@ -100,14 +99,32 @@
     border-radius: 5px;
     color: #ffffff;
     cursor: pointer;
-    font-size: 13px;
+    font-size: 11px;
     text-transform: uppercase;
 }
 
 .btn__contador:hover {
     background-color: #000000;
 }
+.btn__delete__carrito{
+    border: none;
+    background:none;
+}
+.fa-sharp{
+    font-size: 11px;
+}
 
+@media screen and (max-width: 768px){
+    .product__contador__carrito{
+        display: flex;
+        justify-content: center;
+    }
+    #cart-count{
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+
+}
 
 @media screen and (min-width: 768px) {
     .modalContainer .modal-content {
@@ -121,6 +138,28 @@
         grid-gap: 10px;
 
     }
+    .product__contador__carrito{
+        display: flex;
+        justify-content: center;
+    }
+    .product__name__carrito{
+        font-size: 16px;
+    }
+    #cart-count{
+        margin-left: 3px;
+        margin-right: 3px;
+        height: 30px;
+        width: 30px;
+        line-height: 30px
+    }
+    .btn__contador{
+        padding: 5px 15px 5px 15px;
+        
+    }
+    .fa-sharp{
+        font-size: 25px;
+    }
+
 }
 
 @keyframes fadeIn {

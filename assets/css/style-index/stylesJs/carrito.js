@@ -1,14 +1,11 @@
-import { estan } from '../../../../controllers/controllers-products-index/product-controller-carrito.js'
-
-
-
+import { uniqueItems } from '../../../../controllers/controllers-products-index/product-controller-carrito.js'
 var modal = document.getElementById("myModal");
 var btn = document.getElementById("btnModal");
 var span = document.getElementsByClassName("close")[0];
 var body = document.getElementsByTagName("body")[0];
 
 btn.onclick = function () {
-  if(estan.length > 0){
+  if(uniqueItems.size > 0){
     modal.style.display = "block";
     modal.style.opacity = "1";
   
@@ -16,7 +13,7 @@ btn.onclick = function () {
     body.style.height = "100%";
     body.style.overflow = "hidden";
   
-    console.log(estan.length);
+    console.log(uniqueItems);
   }else{
     console.log("No hay nadas");
   }

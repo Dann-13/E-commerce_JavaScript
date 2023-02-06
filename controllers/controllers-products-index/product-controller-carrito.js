@@ -1,26 +1,27 @@
 import { productosServices } from '../../services/productos-service.js';
 const container = document.getElementById('product-list');
-//Lista para verificar cuantos productos se estan agregado al carrito
-export let estan = [];
+//Lista para verificar cuantos productos se estan agregado al carrito con set para que no se repitan
+export let uniqueItems = new Set([]);
 container.addEventListener('click', event => {
     if (event.target.matches('.get-product')) {
         const productId = event.target.getAttribute('data-product-id');
-        console.log(event.target);
+        console.log(uniqueItems);
+        if (!uniqueItems.has(productId)) {//Si el Producto no se encuentra en el carrito que lo añada
+            console.log("El producto esta en el carrito");
+            //Obtenemos la informacion del producto seleccionado por su id
 
-        //Obtenemos la informacion del producto seleccionado por su aid
-
-        const obtenerInformacion = async () => {
-            try {
-                //Hacemos el llmado del producto por su id
-                const product = await productosServices.detalleProducto(productId);
-                console.log(product.name);
-                //Seleccionamos el div contendor de productos del carrito
-                const productResults = document.querySelector('.product__list');
-                //Creamos un nuevo elemento dentro del contenedor 
-                const seccion = document.createElement("div");
-                seccion.classList.add("product__item__carrito");
-                productResults.appendChild(seccion);
-                const productos = `
+            const obtenerInformacion = async () => {
+                try {
+                    //Hacemos el llmado del producto por su id
+                    const product = await productosServices.detalleProducto(productId);
+                    console.log(product.name);
+                    //Seleccionamos el div contendor de productos del carrito
+                    const productResults = document.querySelector('.product__list');
+                    //Creamos un nuevo elemento dentro del contenedor 
+                    const seccion = document.createElement("div");
+                    seccion.classList.add("product__item__carrito");
+                    productResults.appendChild(seccion);
+                    const productos = `
                     <div class="product__img__contenedor">
                     <img class="product__img__carrito" src="${product.url}" alt="Product 2">
                     </div>
@@ -32,16 +33,16 @@ container.addEventListener('click', event => {
                         <button class="btn__delete__carrito"><i class="fa-sharp fa-solid fa-trash"></i></button>
                     </div>
                     `
-                seccion.innerHTML = productos;
+                    seccion.innerHTML = productos;
 
-                //Mensaje de Agregar producto satisfactorio
-
-                estan.push(product);
-
-            } catch (err) {
-                console.log(err);
+                    //Agregamos el producto ára verificar si el carrito abrira o no 
+                    uniqueItems.add(product.id);
+                } catch (err) {
+                    console.log(err);
+                }
             }
+            obtenerInformacion();
         }
-        obtenerInformacion();
+        
     }
 });

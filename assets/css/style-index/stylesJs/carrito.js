@@ -5,17 +5,26 @@ var span = document.getElementsByClassName("close")[0];
 var body = document.getElementsByTagName("body")[0];
 
 btn.onclick = function () {
-  if(uniqueItems.size > 0){
+  if (uniqueItems.size > 0) {
     modal.style.display = "block";
     modal.style.opacity = "1";
-  
+
     body.style.position = "static";
     body.style.height = "100%";
     body.style.overflow = "hidden";
-  
+
     console.log(uniqueItems);
-  }else{
-    console.log("No hay nadas");
+  } else {
+
+    function showAlert() {
+      alertify.message('Este es un mensaje');
+      alertify
+        .alert("Alerta!", "Tienes que tener al menos un producto en el carrito!.", function () {
+          alertify.message("Lo Hare");
+        }).set('label', 'Ok :3');
+    }
+    showAlert();
+
   }
 }
 

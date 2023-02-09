@@ -37,6 +37,12 @@ container.addEventListener('click', event => {
 
                     //Agregamos el producto ára verificar si el carrito abrira o no 
                     uniqueItems.add(product.id);
+
+                    //Mensaje 
+                    function showAlert() {
+                        alertify.success('El producto se agregó satisfactoriamente');
+                      }
+                      showAlert();
                 } catch (err) {
                     console.log(err);
                 }

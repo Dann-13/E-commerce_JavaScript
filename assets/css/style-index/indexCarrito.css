@@ -134,7 +134,6 @@
     font-family: 'Glegoo', serif;
 
 }
-
 @media screen and (max-width: 768px) {
     .product__contador__carrito {
         display: flex;

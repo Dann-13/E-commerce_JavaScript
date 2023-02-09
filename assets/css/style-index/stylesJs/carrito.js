@@ -17,10 +17,9 @@ btn.onclick = function () {
   } else {
 
     function showAlert() {
-      alertify.message('Este es un mensaje');
       alertify
         .alert("Alerta!", "Tienes que tener al menos un producto en el carrito!.", function () {
-          alertify.message("Lo Hare");
+          alertify.success('Lo Hare!');
         }).set('label', 'Ok :3');
     }
     showAlert();

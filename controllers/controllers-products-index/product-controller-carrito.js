@@ -1,20 +1,18 @@
 import { productosServices } from '../../services/productos-service.js';
 const container = document.getElementById('product-list');
+//contador precios
+let cartTotal = 0;
 //Lista para verificar cuantos productos se estan agregado al carrito con set para que no se repitan
 export let uniqueItems = new Set([]);
 container.addEventListener('click', event => {
     if (event.target.matches('.get-product')) {
         const productId = event.target.getAttribute('data-product-id');
-        console.log(uniqueItems);
         if (!uniqueItems.has(productId)) {//Si el Producto no se encuentra en el carrito que lo añada
-            console.log("El producto esta en el carrito");
             //Obtenemos la informacion del producto seleccionado por su id
-
             const obtenerInformacion = async () => {
                 try {
                     //Hacemos el llmado del producto por su id
                     const product = await productosServices.detalleProducto(productId);
-                    console.log(product.name);
                     //Seleccionamos el div contendor de productos del carrito
                     const productResults = document.querySelector('.product__list');
                     //Creamos un nuevo elemento dentro del contenedor 
@@ -32,23 +30,30 @@ container.addEventListener('click', event => {
                         <button class="btn__contador" onclick="removeFromCart()">-</button>
                         <button class="btn__delete__carrito"><i class="fa-sharp fa-solid fa-trash"></i></button>
                     </div>
+                    
                     `
                     seccion.innerHTML = productos;
-
+                    //precios 
+                    cartTotal += parseFloat(product.price);
+                    // Actualizar el HTML para mostrar el total del carrito
+                    updateCartTotal(cartTotal);
                     //Agregamos el producto ára verificar si el carrito abrira o no 
                     uniqueItems.add(product.id);
-
                     //Mensaje 
                     function showAlert() {
                         alertify.success('El producto se agregó satisfactoriamente');
-                      }
-                      showAlert();
+                    }
+                    showAlert();
                 } catch (err) {
                     console.log(err);
                 }
             }
             obtenerInformacion();
         }
-        
+
     }
 });
+function updateCartTotal(cartTotal) {
+    const cartTotalElement = document.getElementById('product__prices');
+    cartTotalElement.innerHTML = `Total ${cartTotal.toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}`;
+}

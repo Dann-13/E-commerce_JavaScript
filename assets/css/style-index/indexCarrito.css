@@ -85,7 +85,7 @@
 
 }
 
-#cart-count {
+.cart-count {
     background-color: #3C43A4;
     border-radius: 50%;
     color: #ffffff;
@@ -107,13 +107,10 @@
     text-transform: uppercase;
 }
 
-.btn__contador:hover {
-    background-color: #000000;
-}
-
 .btn__delete__carrito {
     border: none;
     background: none;
+    cursor: pointer;
 }
 
 .fa-sharp {
@@ -160,7 +157,7 @@
         justify-content: center;
     }
 
-    #cart-count {
+    .cart-count {
         background-color: white;
         color: #000;
     }
@@ -198,7 +195,7 @@
         font-size: 16px;
     }
 
-    #cart-count {
+    .cart-count {
         margin-left: 3px;
         margin-right: 3px;
         height: 30px;

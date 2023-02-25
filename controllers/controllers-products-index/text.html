@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="product-list"></ul>
+    <div id="cart">
+        <h2>Carrito</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items"></tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">Total</td>
+                    <td id="cart-total">$0.00</td>
+                </tr>
+            </tfoot>
+        </table>
+        <button id="clear-cart">Vaciar carrito</button>
+    </div>
+
+
+    <script type="Module" src="/controllers/controllers-products-index/test.js"></script>
+</body>
+
+</html>

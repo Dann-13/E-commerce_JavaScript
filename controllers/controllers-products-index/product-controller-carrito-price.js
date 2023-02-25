@@ -18,4 +18,3 @@ function updateCartTotal() {
     const cartTotalElement = document.querySelector('.product__prices');
     cartTotalElement.textContent = cartTotal;
 }
-  

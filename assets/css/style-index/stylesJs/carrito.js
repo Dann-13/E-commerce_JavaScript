@@ -1,20 +1,18 @@
-import { uniqueItems } from '../../../../controllers/controllers-products-index/product-controller-carrito.js'
+import { cart } from '../../../../controllers/controllers-products-index/product-controller-carrito.js'
 var modal = document.getElementById("myModal");
 var btn = document.getElementById("btnModal");
 var span = document.getElementsByClassName("close")[0];
 var body = document.getElementsByTagName("body")[0];
-
+console.log(cart.length)
 btn.onclick = function () {
-  if (uniqueItems.size > 0) {
+  if (cart.size > 0) { //uniqueItems.size > 0
     modal.style.display = "block";
     modal.style.opacity = "1";
 
     body.style.position = "static";
     body.style.height = "100%";
     body.style.overflow = "hidden";
-
-    console.log(uniqueItems);
-  } else {
+} else {
 
     function showAlert() {
       alertify

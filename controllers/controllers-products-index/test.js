@@ -89,15 +89,7 @@ function updateCart() {
             updateCart();
         });
     }
-    //Manejador de eventos para los botones 
-    let buttonsIncrement = document.querySelectorAll('.btn-increment');
-    console.log(buttonsIncrement)
-    for (let i = 0; i < buttonsIncrement.length; i++) {
-        buttonsIncrement[i].addEventListener('click', function () {
-            cosnsole.log(this.dataset.name);
-            
-        });
-    }
+
 }
 
 // Eliminar un producto del carrito

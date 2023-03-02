@@ -97,8 +97,8 @@ function updateCart() {
         <h3 class="product__name__carrito">${product.name}</h3>
         <div class="product__contador__carrito">
             <button class="btn-increment btn__contador" data-name="${product.name}">+</button>
-            <span id="cart-count">0</span>
-            <button class="btn__contador" data-name="${product.name}">-</button>
+            <span id="cart-count" class="cart-count" data-name="${product.name}">0</span>
+            <button class="btn-decrement btn__contador" data-name="${product.name}">-</button>
             <button class="remove-item btn__delete__carrito" data-name="${product.name}"><i class="fa-sharp fa-solid fa-trash"></i></button>
         </div>
 
@@ -118,15 +118,36 @@ function updateCart() {
             updateCart();
         });
     }
-    //Manejador de eventos para los botones 
-    let buttonsIncrement = document.querySelectorAll('.btn-increment');
-    console.log(buttonsIncrement)
-    for (let i = 0; i < buttonsIncrement.length; i++) {
-        buttonsIncrement[i].addEventListener('click', function () {
-            console.log(this.dataset.name);
-
+    //Acciones botones
+    /**
+        @description Esta seccion obtine la clase cart-count que es el numero de productos que un producto tiene
+        iterando cada uno de ellos para escribir la cantidad actual de un producto 
+    */
+    document.querySelectorAll('.cart-count').forEach(item => {
+        const product = cart.find(p => p.name === item.dataset.name);
+        item.textContent = product.quantity;
+    });
+    //Selecciona todos los botones con la clase 'btn-increment' y agrega un evento de clic a cada uno. 
+    //Cuando se hace clic en un botón, se aumenta la cantidad del producto correspondiente en el carrito de compras y se actualiza la visualización del carrito.
+    document.querySelectorAll('.btn-increment').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const name = btn.dataset.name;
+          const product = cart.find(p => p.name === name);
+          product.quantity++;
+          updateCart();
         });
-    }
+      });
+    // Selecciona todos los botones con la clase 'btn-decrement' y agrega un evento de clic a cada uno. 
+    //Cuando se hace clic en un botón, se disminuye la cantidad del producto correspondiente en el carrito de compras y se actualiza la visualización del carrito.
+    document.querySelectorAll('.btn-decrement').forEach(btn =>{
+        btn.addEventListener('click', () =>{
+            const name = btn.dataset.name;
+            const product = cart.find(p => p.name === name);
+            product.quantity--;
+            updateCart();
+        });
+    });
+
 }
 // Eliminar un producto del carrito
 function removeFromCart(name) { //Recibe eL nombre dek producto a eliminar

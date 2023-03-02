@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/Dann-13/e-commerce#readme",
   "dependencies": {
-    "json-server": "^0.17.1"
+    "json-server": "^0.17.2"
   }
 }

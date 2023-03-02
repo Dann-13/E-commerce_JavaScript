@@ -1,3 +1,4 @@
+
 .modalContainer {
     display: none;
     position: fixed;
@@ -105,6 +106,7 @@
     cursor: pointer;
     font-size: 11px;
     text-transform: uppercase;
+    font-size: 15px;
 }
 
 .btn__delete__carrito {
@@ -145,16 +147,25 @@
     border-top: 1px solid #3C43A4;
     margin: auto;
 }
+.product__contador__carrito > *{
+    margin: 2px;
+}
 
 .product__price p {
     text-align: center;
     font-family: 'Glegoo', serif;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) { /*Pra Tablets*/
+    .modalContainer .modal-content{
+        width: 85% !important;
+    }
     .product__contador__carrito {
         display: flex;
         justify-content: center;
+    }
+    .product__contador__carrito > *{
+        margin: 7px;
     }
 
     .cart-count {
@@ -165,6 +176,7 @@
     .btn__contador {
         background-color: white;
         color: #000;
+        font-size: 15px;
     }
     .product__price{
         width: 35%;
@@ -190,21 +202,24 @@
         display: flex;
         justify-content: center;
     }
+    .product__contador__carrito > *{
+        margin: 7px;
+    }
 
     .product__name__carrito {
         font-size: 16px;
     }
 
-    .cart-count {
-        margin-left: 3px;
-        margin-right: 3px;
-        height: 30px;
-        width: 30px;
-        line-height: 30px
+    #cart-count{
+        height: 25px !important;
+        width: 25px !important;
+        line-height: 25px !important;
+        text-align: center;
     }
 
     .btn__contador {
         padding: 5px 15px 5px 15px;
+        font-size: 15px;
 
     }
 

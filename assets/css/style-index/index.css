@@ -289,11 +289,7 @@ body {
     .seleccion {
         padding: 0 15px 0 15px;
     }
-    #cart-count{
-        height: 25px !important;
-        width: 25px !important;
-        line-height: 25px !important;
-    }
+    
     .btn__contador{
         padding-left: 10px;
         padding-right: 10px;

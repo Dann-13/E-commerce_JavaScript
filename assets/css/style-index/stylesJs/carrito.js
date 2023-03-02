@@ -1,11 +1,12 @@
-import { cart } from '../../../../controllers/controllers-products-index/product-controller-carrito.js'
+import { obtenerLista } from '../../../../controllers/controllers-products-index/product-controller-carrito.js'
 var modal = document.getElementById("myModal");
 var btn = document.getElementById("btnModal");
 var span = document.getElementsByClassName("close")[0];
 var body = document.getElementsByTagName("body")[0];
-console.log(cart.length)
+let cart = obtenerLista();
+console.log(cart.length);
 btn.onclick = function () {
-  if (cart.size > 0) { //uniqueItems.size > 0
+  if (cart.length > 0) { //uniqueItems.size > 0
     modal.style.display = "block";
     modal.style.opacity = "1";
 

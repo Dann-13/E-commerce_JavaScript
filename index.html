@@ -16,7 +16,11 @@
 
     <script src="https://kit.fontawesome.com/b049437614.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" rel="stylesheet">
-
+    <!--Carrusel-->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
     <title>E-Commerce</title>
 </head>
 
@@ -31,7 +35,7 @@
                     </div>
                 </div>
                 <button id="btnModal"><i class="icono__carrito fa-solid fa-cart-plus"></i></button>
-        
+
             </div>
             <button id="menuButton">Menú</button>
             <ul id="menuList">
@@ -97,6 +101,11 @@
                 </div>
 
             </div>
+            <div class="swiper-container">
+                <div class="slider">
+                </div>
+            </div>
+
         </section>
 
     </main>
@@ -136,7 +145,7 @@
             </div>
         </div>
     </footer>
-    
+
     <div id="myModal" class="modalContainer">
         <div class="modal-content">
             <span class="close">×</span>
@@ -153,8 +162,9 @@
     <script type="Module" src="/controllers/controllers-products-index/filter.js"></script>
     <script type="Module" src="/assets/css/style-index/stylesJs/carrito.js"></script>
     <script type="Module" src="/controllers/controllers-products-index/product-controller-carrito.js"></script>
-
-    <script type="Module" src="/controllers/controllers-products-index/product-controller-carrito-price.js"></script>
+    <!--Carrusel-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 </body>
 
 </html>

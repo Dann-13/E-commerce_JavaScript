@@ -1,6 +1,12 @@
-body {
-    background-color: #f1f1f1;
-}
+
+.slider {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .slick-slide img {
+    width: 100%;
+  }
 
 .container {
     display: flex;
@@ -11,15 +17,13 @@ body {
     align-items: center;
     justify-content: space-around;
 }
-.icono__user{
-    opacity: 0;
-}
 .container__encabezado__opciones button{
     border: none;
 }
 .icono__user{
     font-size: 30px;
     display: none !important;
+    opacity: 0;
 }
 .icono__carrito{
     z-index: 10;
@@ -312,6 +316,7 @@ body {
     }
     .icono__user{
         display: block !important;
+        opacity: 1;
     }
     .container__encabezado__opciones{
         justify-content: space-around;

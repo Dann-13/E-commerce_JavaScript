@@ -5,7 +5,6 @@ let cartTotal = 0;
 const obtenerInformacion = async () => {
     try {
         const product = await productosServices.lista_productos();
-        console.log(product)
         // Iterar sobre los productos y crear elementos <li> en el DOM
         for (let producto of product) {
             let item = document.createElement('li');

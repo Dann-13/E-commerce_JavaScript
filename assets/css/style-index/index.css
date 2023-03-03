@@ -9,6 +9,10 @@ body {
 .container__encabezado__opciones{
     display: flex;
     align-items: center;
+    justify-content: space-around;
+}
+.icono__user{
+    opacity: 0;
 }
 .container__encabezado__opciones button{
     border: none;

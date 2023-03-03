@@ -131,19 +131,21 @@ function updateCart() {
     //Cuando se hace clic en un botón, se aumenta la cantidad del producto correspondiente en el carrito de compras y se actualiza la visualización del carrito.
     document.querySelectorAll('.btn-increment').forEach(btn => {
         btn.addEventListener('click', () => {
-          const name = btn.dataset.name;
-          const product = cart.find(p => p.name === name);
-          product.quantity++;
-          updateCart();
-        });
-      });
-    // Selecciona todos los botones con la clase 'btn-decrement' y agrega un evento de clic a cada uno. 
-    //Cuando se hace clic en un botón, se disminuye la cantidad del producto correspondiente en el carrito de compras y se actualiza la visualización del carrito.
-    document.querySelectorAll('.btn-decrement').forEach(btn =>{
-        btn.addEventListener('click', () =>{
             const name = btn.dataset.name;
             const product = cart.find(p => p.name === name);
-            product.quantity--;
+            product.quantity++;
+            updateCart();
+        });
+    });
+    // Selecciona todos los botones con la clase 'btn-decrement' y agrega un evento de clic a cada uno. 
+    //Cuando se hace clic en un botón, se disminuye la cantidad del producto correspondiente en el carrito de compras y se actualiza la visualización del carrito.
+    document.querySelectorAll('.btn-decrement').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const name = btn.dataset.name;
+            let index = cart.findIndex(p => p.name === name);
+            if (index !== -1 && cart[index].quantity > 1) {
+                cart[index].quantity--;
+            }
             updateCart();
         });
     });
@@ -155,10 +157,7 @@ function removeFromCart(name) { //Recibe eL nombre dek producto a eliminar
     //let index = cart.findIndex(item => item.name === name);
     let index = cart.findIndex(item => item.name === name);
     if (index !== -1) {
-        cart[index].quantity--;
-        if (cart[index].quantity === 0) {
-            cart.splice(index, 1);
-        }
+        cart.splice(index, 1);
         // Actualizar el LocalStorage
         localStorage.setItem('cart', JSON.stringify(cart));
         // Mostrar una alerta

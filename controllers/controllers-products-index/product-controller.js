@@ -4,17 +4,21 @@ const obtenerInformacion = async () => {
     try {
         const products = await productosServices.lista_productos();
         console.log(products)
-        let html = '';
+        let imagen = '';
         for (let i = 0; i < products.length; i++) {
-            html += '<div class="product"><img src="' + products[i].url + '"><h2>' + products[i].name + '</h2><p>' + products[i].description + '</p><span>$' + products[i].price + '</span></div>';
+            imagen += '<div class="slider__product"><div class="slider__product__img"><img src="' 
+            + products[i].url + '"></div><h2>' 
+            + products[i].name + '</h2><p>' 
+            + products[i].description + '</p><span>$' 
+            + products[i].price + '</span></div>';
         }
-        slider.html(html);
+        slider.html(imagen);
 
         // inicializa el carrusel con Slick
         slider.slick({
-            slidesToShow: 3, // muestra 4 imágenes a la vez
+            slidesToShow: 3, // muestra 3 imágenes a la vez
             autoplay: true, // inicia la animación automáticamente
-            autoplaySpeed: 1500, // velocidad de cambio de imagen (2 segundos)
+            autoplaySpeed: 1000, // velocidad de cambio de imagen (2 segundos)
             speed: 1500, // velocidad de animación (1 segundo)
             infinite: true, // permite recorrer el carrusel de forma infinita
             arrows: false, // oculta las flechas de navegación

@@ -6,11 +6,11 @@ const obtenerInformacion = async () => {
         console.log(products)
         let imagen = '';
         for (let i = 0; i < products.length; i++) {
-            imagen += '<div class="slider__product"><div class="slider__product__img"><img src="' 
-            + products[i].url + '"></div><h2>' 
-            + products[i].name + '</h2><p>' 
-            + products[i].description + '</p><span>$' 
-            + products[i].price + '</span></div>';
+            imagen += '<div class="product-item"><img src="' 
+            + products[i].url + '"><h3>' 
+            + products[i].name + '</h3><p>' 
+            + products[i].description + '</p><p>$' 
+            + products[i].price + '</p></div>';
         }
         slider.html(imagen);
 

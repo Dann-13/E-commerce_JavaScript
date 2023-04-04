@@ -1,4 +1,7 @@
 
+html {
+    scroll-behavior: smooth;
+}
 .slider {
     max-width: 800px;
     margin: 0 auto;
@@ -19,6 +22,7 @@
 }
 .container__encabezado__opciones button{
     border: none;
+    background-color: white;
 }
 .icono__user{
     font-size: 30px;
@@ -169,6 +173,7 @@
 
 .opcionesList.active {
     max-height: 300px;
+    background-color: #fff;
     /* establece la altura máxima para mostrar todos los elementos */
 }
 

@@ -25,7 +25,6 @@ It is about the realization of an e-commerce where products will be shown and ad
 :traffic_light:
 Actualmente el proyecto a un esta en desarrollo en donde se mejoraran los siguentes puntos
 - Diseño de la parte de administracion de Productos
-- Agregar un carrusel de imagenes a la pagina index
 - Creacion de un Loguin SImple para la demostracion de la parte de administracion
 
 ## :heavy_check_mark: Technologies Used
@@ -35,5 +34,10 @@ Actualmente el proyecto a un esta en desarrollo en donde se mejoraran los siguen
 - Json
 - Json-server
 - Node
+
+## Imagenes del Proyecto
+<img src="https://user-images.githubusercontent.com/112647085/229918545-dbac682d-2d69-4b43-bf88-8125d492bd81.png" alt="index-Ecommerce" width="400" height="600">
+
+
 
 Muchas Gracias Por visitar mi pequeño espacion, te escribo en español pues es mi idioma nativo relaxed !

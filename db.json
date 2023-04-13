@@ -31,6 +31,14 @@
       "description": "Fundas Para Dispositivos Mobiles",
       "category": "Juguetes",
       "id": "2750b775-0b4e-4d91-80da-790bef6ca87d"
+    },
+    {
+      "url": "https://http2.mlstatic.com/D_NQ_NP_873914-CBT47071865395_082021-W.jpg",
+      "name": "Zapatillas Deportivas",
+      "price": "60000",
+      "description": "Zapatillas Deportivas Negras",
+      "category": "Deporte",
+      "id": "32711a3b-e570-4a40-b110-0a06de56770c"
     }
   ]
 }

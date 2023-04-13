@@ -2,106 +2,84 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/css/componentes/main.css">
-    <link rel="stylesheet" href="/assets/css/componentes/form.css">
-    <link rel="stylesheet" href="/assets/css/componentes/footer.css">
-    <link rel="stylesheet" href="/assets/css/componentes/table.css">
-    <link rel="stylesheet" href="/assets/css/base/reset.css">
-    <link rel="stylesheet" href="/assets/css/listar_productos.css">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/b049437614.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/base/reset.css" />
+    <link rel="stylesheet" href="/assets/css/listar_productos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/pulse/bootstrap.min.css"
+        integrity="sha384-L7+YG8QLqGvxQGffJ6utDKFwmGwtLcCjtwvonVZR/Ba2VzhpMwBz51GaXnUsuYbj" crossorigin="anonymous" />
     <title>Lista Productos</title>
 </head>
 
 <body class="app">
-    <section class="encabezado">
-        <div class="container">
+    <nav class="navbar navbar-dark">
+        <div class="container-fluid justify-content-center" id="nav">
             <div class="logo">
-                <img src="/assets/img/logos.svg" alt="" class="imgLogo">
+                <img src="/assets/img/logos.png" alt="" class="imgLogo" />
             </div>
-
-            <form action="" class="buscador" id="search-product-form">
-                <input type="text" name="name" id="buscador" class="inputBuscador" placeholder="¿Que decea buscar?" data-info>
-                <button type="submit" class="button_buscar"> <img src="/assets/img/buscar.png" alt="buscar" class="logo__buscador"> </button>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2 rounded-start" type="search" placeholder="Search" aria-label="Search" />
+                <button class="btn btn-outline-success" type="submit">
+                    <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                </button>
             </form>
-
-            <div class="btnclass">
-                <a href="/index.html" class="btns">Salir</a>
-            </div>
         </div>
-
-    </section>
+    </nav>
     <main class="contenido">
-        <div class="container__list">
-            <div class="agregar">
-                <div class="info__titulo">
-                    <h2>Todos los Productos</h2>
-                </div>
-                <a href="/assets/screens/nuevo_producto.html" class="btns">Agregar Producto</a>
-            </div>
-            <div class="productos__items" id="mySection" data-productos>
+        <p class="h3 text-center pt-5 pb-5">Bienvenido Administrador</p>
+        <div class="productos__items" id="mySection">
+            <table>
+                <thead>
+                    <tr >
+                        <th colspan="6" class="title__table">Lista de Productos</th>
+                    </tr>
+                    <tr>
+                        <th>Imagen</th>
+                        <th>Nombre</th>
+                        <th>Descripcion</th>
+                        <th>Precio</th>
+                        <th colspan="2">Opciones</th>
+                    </tr>
+                  </thead>
+                  <tbody data-productos>
 
-            </div>
+                  </tbody>
+            </table>
+            
+
+
         </div>
-        <section class="formulario">
-            <div class="container">
-                <div class="formulario__class">
-                    <div class="formulario__1">
-                        <div class="formulario__logo">
-                            <img src="/assets/img/logos.svg" alt="" srcset="" class="logo__form">
-                        </div>
-                        <div class="info">
-                            <a href="" class="info__elemento">Quienes Somos</a>
-                            <a href="" class="info__elemento">Politicas de Privacidad</a>
-                            <a href="" class="info__elemento">Programa de fidelidad</a>
-                            <a href="" class="info__elemento">Nuestras tiendas</a>
-                            <a href="" class="info__elemento">Quiero ser franquisiado</a>
-                            <a href="" class="info__elemento1">Anuncie Aqui</a>
-                        </div>
-                    </div>
-                    <div class="formulario__div">
-                        <ul>
-                            <li class="detallesContacto-Titulos">Hable Con nosotros</li>
-                            <li>
-                                <form action="" class="formulario-Contacto">
-                                    <div class="elemento">
-                                        <label for="nombre">Nombre</label>
-                                        <input id="nombre" type="text" id="name" name="user_name"
-                                            placeholder="Escribe aquí tu nombre">
-                                    </div>
-                                    <div class="elemento">
-                                        <label for="title" class="form-label">Mensaje</label>
-                                        <textarea name="mensaje" class="mensaje" id="" cols="30" rows="5"
-                                            placeholder="Escriba su Mensaje"></textarea>
-                                    </div>
-                                    <div class="elemento">
-                                        <button class="btn-enviarMensaje" id="enviar" type="submit">Enviar
-                                            Mensaje</button>
-                                    </div>
-                                </form>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
-    <footer class="rodapePrincipal">
-        <div class="container">
-            <section class="rodapePrincipal-list">
-                <ul class="footer-list">
-                    <li class="itemfooter-list">Desarrollado Por: Daniel Gomez </li>
-                    <li class="itemfooter-list">2022</li>
-                </ul>
-            </section>
-        </div>
+    <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item">
+                <a href="#" class="nav-link px-2 text-muted">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link px-2 text-muted">Características</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link px-2 text-muted">Precios</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link px-2 text-muted">FAQs</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link px-2 text-muted">Acerca</a>
+            </li>
+        </ul>
+        <p class="text-center text-muted">Desarrollado Por: Daniel Gomez</p>
     </footer>
     <script type="Module" src="/controllers/producto-controller.js"></script>
     <script type="Module" src="/services/productos-service.js"></script>
     <script type="Module" src="/controllers/searchProduct.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/pulse/bootstrap.min.css"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

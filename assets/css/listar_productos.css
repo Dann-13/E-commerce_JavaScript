@@ -42,6 +42,9 @@ table {
   font-weight: bold;
   font-size: 20px;
 }
+.name__product{
+  font-weight: bold !important;
+}
 
 td {
   overflow: hidden;
@@ -53,7 +56,7 @@ th,
 td {
   width: 20%;
   padding: 12px;
-  text-align: left;
+  text-align: center;
   border-bottom: 1px solid #ddd;
 }
 
@@ -65,7 +68,8 @@ td {
 .imgClass {
   width: 200px;
   height: auto;
-  padding-right: 50px;
+  margin: auto;
+
 }
 
 .imgClass img {
@@ -79,7 +83,7 @@ th {
 }
 
 .btn__edit {
-  padding: 6px 12px;
+  padding: 6px 20px;
   background-color: #4caf50;
   border: none;
   color: white;
@@ -112,4 +116,30 @@ th {
 
 .btn__delete:hover {
   background-color: #8e3e3e;
+}
+@media (max-width: 600px) {
+  .imgClass {
+    width: 300px;
+  }
+  .tags{
+    display: none;
+  }
+  tr {
+    border-bottom: 1px solid grey;
+
+  }
+  .td__edits{
+    padding-bottom: 15px;
+  }
+  th, td {
+    display: block;
+    width: 100%;
+    border: none;
+  }
+  
+  td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+  }
 }

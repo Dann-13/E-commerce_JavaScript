@@ -1,16 +1,18 @@
 import { productosServices } from "../services/productos-service.js";
 //Funcion que lista los productos
-const crearNuevaSeccion = (url, name, price, id) => {
+const crearNuevaSeccion = (url, name,description, price, id) => {
   const seccion = document.createElement("tr");
   seccion.id = "new";
   const contenido = `
 
       <td class="imgClass"><img src="${url}" alt=""></td>
-      <td>${name}</td>
-      <td>des</td>
+      <td class="name__product">${name}</td>
+      <td>${description}</td>
       <td>${price}</td>
-      <td class="td__edits"><button class="btn__edit">Editar</button></td>
-      <td class="td__edits"><button class="btn__delete">Eliminar</button></td>
+      <td class="td__edits">
+        <a href="/assets/screens/editarProducto.html?id=${id}"class="btn__edit">Editar</a>
+      </td>
+      <td class="td__edits"><button class="btn__delete" id="${id}">Eliminar</button></td>
   `;
   seccion.innerHTML = contenido;
   const btn = seccion.querySelector("button");
@@ -33,8 +35,8 @@ productosServices
   .lista_productos()
   .then((data) => {
     //console.log(data);
-    data.forEach(({ url, name, price, id }) => {
-      const nuevaLinea = crearNuevaSeccion(url, name, price, id);
+    data.forEach(({ url, name, description, price, id }) => {
+      const nuevaLinea = crearNuevaSeccion(url, name, description, price, id);
       table.appendChild(nuevaLinea);
     });
   })

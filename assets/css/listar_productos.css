@@ -13,7 +13,10 @@
   max-width: 100%;
   height: auto;
 }
-
+main p {
+  font-family: "Glegoo", serif;
+  font-weight: 700 !important;
+}
 .contenido {
   display: flex;
   justify-content: center;
@@ -30,6 +33,10 @@
 
 .title__table {
   text-align: center;
+  font-family: "Glegoo", serif;
+  font-weight: 700;
+  background-color: #3c43a4;
+  color: white;
 }
 
 table {
@@ -37,19 +44,27 @@ table {
   width: 90%;
   table-layout: fixed;
 }
+.tags{
+  box-shadow: none;
+  border-bottom: none;
+}
 
 .title__table {
   font-weight: bold;
   font-size: 20px;
 }
-.name__product{
+.name__product {
   font-weight: bold !important;
+}
+tr {
+  box-shadow: 0px 5px 5px -5px #3c43a4;
+  border-bottom: 1px solid #3c43a4;
 }
 
 td {
   overflow: hidden;
   word-wrap: break-word;
-
+  font-family: "Glegoo", serif;
 }
 
 th,
@@ -62,14 +77,13 @@ td {
 
 .td__edits {
   padding: 0px;
-  text-align: center
+  text-align: center;
 }
 
 .imgClass {
   width: 200px;
   height: auto;
   margin: auto;
-
 }
 
 .imgClass img {
@@ -117,26 +131,32 @@ th {
 .btn__delete:hover {
   background-color: #8e3e3e;
 }
+.links a {
+  color: #000;
+  padding: 5px 5px;
+  font-size: 20px;
+}
 @media (max-width: 600px) {
   .imgClass {
     width: 300px;
   }
-  .tags{
+  .tags {
     display: none;
   }
   tr {
-    border-bottom: 1px solid grey;
-
+    box-shadow: 0px 5px 5px -5px #3c43a4;
+    border-bottom: 1px solid #3c43a4;
   }
-  .td__edits{
+  .td__edits {
     padding-bottom: 15px;
   }
-  th, td {
+  th,
+  td {
     display: block;
     width: 100%;
     border: none;
   }
-  
+
   td:before {
     content: attr(data-label);
     float: left;

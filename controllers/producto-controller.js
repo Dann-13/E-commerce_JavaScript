@@ -2,7 +2,7 @@ import { productosServices } from "../services/productos-service.js";
 //Funcion que lista los productos
 const crearNuevaSeccion = (url, name,description, price, id) => {
   const seccion = document.createElement("tr");
-  seccion.id = "new";
+  seccion.id = "mySection"
   const contenido = `
 
       <td class="imgClass"><img src="${url}" alt=""></td>

@@ -32,37 +32,31 @@ async function updateProduct(productId, updatedProduct) {
         console.error(err);
     }
 }
+//funcion que busca un producto por su nombre y lo lista en la pagina de listar producto
 async function searchProduct(productName) {
     try {
 
         const response = await fetch(`http://localhost:3000/products?name_like=${productName}`);
         const data = await response.json();
         if (data.length > 0) {
-            //const product = data.find(product => product.name.match(new RegExp(productName, 'i'))); console.log(product);
             for (let key in data) {
                 if (data[key].name.match(new RegExp(productName, 'i'))) {
                     const product = data[key];
-                    //va lo mio
-                    const productResults = document.querySelector('.productos__items');
-                    productResults.classList.add("container");
-                    const contenido = `
-                    <div class="imagen">
-                      <img src="${product.url}" alt="" class="imagen__Producto">
-                    </div>
-                    <div class="nombre">
-                        <p>${product.name}</p>
-                    </div>
-                    <div class="precio">
-                        <p>${product.price}</p>
-                    </div>
-                    <div class="btn">
-                        <button class="btns" type="button" id="${product.id}">Eliminar</button>
-                        <a href="/editarProducto.html?id=${product.id}" class="btns">Editar</a>
-
-                    </div>
-                    `
-                    productResults.innerHTML = contenido;
                     
+                    const table = document.querySelector('.productos__item');
+                    const seccion = document.createElement("tr");
+                    const contenido = `
+                    <td class="imgClass"><img src="${product.url}" alt="imagen Producto"></td>
+                    <td class="name__product">${product.name}</td>
+                    <td>${product.description}</td>
+                    <td>${product.price}</td>
+                    <td class="td__edits">
+                      <a href="/assets/screens/editarProducto.html?id=${product.id}"class="btn__edit">Editar</a>
+                    </td>
+                    <td class="td__edits"><button class="btn__delete" id="${product.id}">Eliminar</button></td>
+                `;
+                seccion.innerHTML = contenido;
+                table.appendChild(seccion);
 
                 }
             }

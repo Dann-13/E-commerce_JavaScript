@@ -31,6 +31,14 @@
       "description": "Zapatillas Deportivas Negras",
       "category": "Deporte",
       "id": "32711a3b-e570-4a40-b110-0a06de56770c"
+    },
+    {
+      "url": "https://img.ecartelera.com/noticias/72900/72938-h3.jpg",
+      "name": "Mario",
+      "price": "30000",
+      "description": "Una peli de mario",
+      "category": "Juguetes",
+      "id": "0b1970c0-497b-48fe-affc-32447fd63fe1"
     }
   ]
 }
